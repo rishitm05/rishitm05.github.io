@@ -1188,8 +1188,8 @@ body {
 /* ── Scroll Reveal ──────────────────────────────────────────────── */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+  transform: translateY(10px);
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
 }
 .reveal.visible {
   opacity: 1;

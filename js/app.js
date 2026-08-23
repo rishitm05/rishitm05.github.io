@@ -14,8 +14,17 @@
     if (window.lucide) {
       lucide.createIcons();
     } else {
-      // Retry once after a short delay if the CDN script hasn't loaded yet
-      setTimeout(() => { if (window.lucide) lucide.createIcons(); }, 500);
+      // Retry with increasing delays until CDN script loads
+      let attempts = 0;
+      const retry = () => {
+        attempts++;
+        if (window.lucide) {
+          lucide.createIcons();
+        } else if (attempts < 10) {
+          setTimeout(retry, 300);
+        }
+      };
+      setTimeout(retry, 200);
     }
   }
 
@@ -373,19 +382,27 @@
         }
       });
     }, {
-      rootMargin: '0px 0px -60px 0px',
-      threshold: 0.1
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.05
     });
 
-    // Observe all current and future .reveal elements
     function observe() {
       $$('.reveal:not(.visible)').forEach(el => observer.observe(el));
     }
 
+    // Initial observe
     observe();
-    // Re-observe after projects render
-    const mo = new MutationObserver(observe);
+
+    // Re-observe when DOM changes (e.g. after projects render)
+    const mo = new MutationObserver(() => {
+      requestAnimationFrame(observe);
+    });
     mo.observe(document.body, { childList: true, subtree: true });
+
+    // Fallback: if elements are still hidden after 2 seconds, force them visible
+    setTimeout(() => {
+      $$('.reveal:not(.visible)').forEach(el => el.classList.add('visible'));
+    }, 2000);
   }
 
   /* ── Nav Background on Scroll ───────────────────────────────── */
