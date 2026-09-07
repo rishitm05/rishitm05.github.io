@@ -1,7 +1,6 @@
 /* ============================================================
    data.js — Centralised portfolio data for Rishit Madireddy
-   Updated Theme: Clean White & Light Blue
-   Aero + Mechanical + General Engineering Focus
+   Updated Experience structure & Exact CV Content
    ============================================================ */
 
 const DATA = {
@@ -11,7 +10,7 @@ const DATA = {
     name: "Rishit Madireddy",
     tagline: "3rd Year Mechanical Engineering Student at UCL with Aerospace Industry Experience",
     aboutLead: "Third-year Mechanical Engineering student at UCL and 2022 Arkwright Engineering Scholar with experience at Boeing as an Aerodynamics Engineering Intern and a virtual internship at GE Aerospace.",
-    aboutBody: "Skilled in CAD, CFD, FEA, MATLAB/Simulink and Python, demonstrated in industry and projects such as a PID-tuned quadcopter, EV charging device and wind turbine. Currently serving as Lead Drone Engineer at UCL Rover Team for aerodynamics and autonomous subsystems with further expertise in mechanical design, testing and systems engineering.",
+    aboutBody: "Skilled in CAD, CFD, MATLAB/Simulink and Python, demonstrated in industry and projects such as a PID-tuned quadcopter, EV charging device and wind turbine. Currently serving as Lead Drone Engineer at UCL Rover Team for aerodynamics and autonomous subsystems with further expertise in mechanical design, testing and systems engineering.",
     email: "rmadireddy05@gmail.com",
     phone: "+44 7459 110597",
     location: "London, UK",
@@ -43,25 +42,13 @@ const DATA = {
     ]
   },
 
-  /* ── Professional Experience ─────────────────────────────── */
+  /* ── Professional Experience (CV Structure & Exact Content) ── */
   experience: [
-    {
-      id: "ucl-rover",
-      title: "Lead Drone Engineer",
-      team: "UCL Rover Team",
-      location: "London, UK",
-      period: "February 2025 – Present",
-      bullets: [
-        "Designing autonomous drone to fly in Martian environment, modelling frame in Fusion and conducting CFD on props in ANSYS.",
-        "Modelling control systems in Simulink, integrating ArUco marker detection to achieve landings on 1 x 1 m pad with Raspberry Pi.",
-        "Increased accuracy of robotic arm by 25% by programming calibration sequence on microcontrollers (ESP32 and Arduino Mega)."
-      ],
-      skills: ["Fusion 360", "ANSYS CFD", "Simulink", "Raspberry Pi", "ArUco Vision", "ESP32", "Arduino Mega"]
-    },
     {
       id: "boeing",
       title: "Aerodynamics Engineering Intern",
-      team: "Boeing Commercial Airplanes",
+      organization: "Boeing Commercial Airplanes",
+      division: "HiLACC, Cody Technology Park",
       location: "Farnborough, UK",
       period: "June 2026 – September 2026",
       bullets: [
@@ -74,9 +61,24 @@ const DATA = {
       skills: ["CATIA V5", "HeldenMesh", "Tecplot", "Python", "SPOD / DMD", "Wind Tunnel Testing", "URANS CFD"]
     },
     {
+      id: "ucl-rover",
+      title: "Lead Drone Engineer and Team Manager",
+      organization: "UCL Rover Team",
+      division: null,
+      location: "London, UK",
+      period: "February 2025 – Present",
+      bullets: [
+        "Designing autonomous drone to fly in Martian environment, modelling frame in Fusion and conducting CFD on props in ANSYS.",
+        "Modelling control systems in Simulink, integrating ArUco marker detection to achieve landings on 1 x 1 m pad with Raspberry Pi.",
+        "Increased accuracy of robotic arm by 25% by programming calibration sequence on microcontrollers (ESP32 and Arduino Mega)."
+      ],
+      skills: ["Fusion 360", "ANSYS CFD", "Simulink", "Raspberry Pi", "ArUco Vision", "ESP32", "Arduino Mega"]
+    },
+    {
       id: "ge-aerospace",
       title: "Virtual Internship – Explore Engineering Programme",
-      team: "GE Aerospace, Inc.",
+      organization: "GE Aerospace, Inc.",
+      division: null,
       location: "Virtual",
       period: "July 2025 – September 2025",
       bullets: [
@@ -88,7 +90,7 @@ const DATA = {
     }
   ],
 
-  /* ── Projects (Expanded Selection) ───────────────────────── */
+  /* ── Projects ────────────────────────────────────────────── */
   projects: [
     {
       id: "quadcopter",

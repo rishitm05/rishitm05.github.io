@@ -12,7 +12,7 @@
   /* ── 1. Populate Profile & About Section ─────────────────────── */
   function populateProfile() {
     if (!window.DATA) return;
-    const { profile, education } = DATA;
+    const { profile } = DATA;
 
     // Hero
     $('#hero-name').textContent = profile.name;
@@ -94,7 +94,7 @@
           <div class="exp-card-header">
             <div>
               <h4 class="item-h3">${exp.title}</h4>
-              <p class="exp-card-company">${exp.team}</p>
+              <p class="exp-card-company">${exp.organization}${exp.division ? ` · ${exp.division}` : ''}</p>
             </div>
             <div class="exp-card-meta">
               <span class="mono-accent">${exp.period}</span>
@@ -115,7 +115,7 @@
     });
   }
 
-  /* ── 4. Populate Projects Section (Expanded Selection) ───────── */
+  /* ── 4. Populate Projects Section ────────────────────────────── */
   function populateProjects() {
     if (!window.DATA || !DATA.projects) return;
     const container = $('#projects-container');
