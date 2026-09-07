@@ -1,6 +1,6 @@
 /* ============================================================
    data.js — Centralised portfolio data for Rishit Madireddy
-   Update this file to change all website content.
+   Tailored to Updated CV: Aero + Mechanical + General Engineering
    ============================================================ */
 
 const DATA = {
@@ -8,12 +8,14 @@ const DATA = {
   /* ── Profile ─────────────────────────────────────────────── */
   profile: {
     name: "Rishit Madireddy",
-    title: "Mechanical & Aerospace Engineering",
-    disciplines: ["Aerodynamics", "CFD", "Autonomous Robotics", "CAD & FEA"],
-    about: "Third-year Mechanical Engineering student at UCL and 2022 Arkwright Engineering Scholar with expertise in aerodynamics, mechanical design and systems engineering. Skilled in CAD, CFD, MATLAB/Simulink and Python, demonstrated through projects including a PID-tuned quadcopter, EV charging device and wind turbine. Currently serving as Lead Drone Engineer at UCL Rover Team for performance and autonomous sub-systems with further industrial experience gained at internships with Boeing and GE Aerospace.",
+    title: "Mechanical, Aerospace & Systems Engineering",
+    tagline: "Mechanical, Aerospace & Robotics Systems Engineer.",
+    aboutLead: "Third-year Mechanical Engineering student at UCL and 2022 Arkwright Engineering Scholar with experience at Boeing as an Aerodynamics Engineering Intern and a virtual internship at GE Aerospace.",
+    aboutBody: "Skilled in CAD, CFD, FEA, MATLAB/Simulink and Python, demonstrated across industry and hands-on projects including a PID-tuned quadcopter, automated EV charging device, and high-efficiency wind turbine. Currently serving as Lead Drone Engineer at UCL Rover Team for aerodynamics and autonomous subsystems with further expertise in mechanical design, testing and systems engineering.",
     email: "rmadireddy05@gmail.com",
     phone: "+44 7459 110597",
     location: "London, UK",
+    clearance: "UK BPSS Cleared",
     github: "https://github.com/rishitm05",
     linkedin: "https://www.linkedin.com/in/rishit-madireddy/",
     driveFolder: "https://drive.google.com/drive/folders/1i_qHLcf9Rqz36Fu3xkGmKzsKSOUM1kZw"
@@ -21,175 +23,170 @@ const DATA = {
 
   /* ── Education ───────────────────────────────────────────── */
   education: {
-    degree: "MEng Mechanical Engineering",
+    degree: "MEng Mechanical Engineering with Year in Industry",
     minor: "Minor in Robotics",
     institution: "University College London (UCL)",
     year: "3rd Year",
-    period: "2024 – 2028 (Expected)",
-    grade: "Predicted First Class with Honours",
+    period: "2024 – 2029 (Expected)",
+    grade: "First Class with Honours (On Track)",
     scholarship: "2022 Arkwright Engineering Scholar",
+    clearance: "UK BPSS Cleared",
     modules: [
-      "Dynamics & Control",
-      "Mathematical Modelling & Analysis",
-      "Introduction to Robotics",
-      "Instrumentation",
-      "Thermodynamics & Fluid Mechanics",
-      "Manufacturing & Design",
-      "Design & Professional Skills",
+      "Dynamics and Control",
+      "Mathematical Modelling and Analysis",
+      "Thermodynamics and Fluid Mechanics",
       "Mechanics of Solids",
-      "Engineering Materials"
+      "Manufacturing and Design",
+      "Engineering Materials",
+      "Instrumentation",
+      "Design and Professional Skills",
+      "Robotics and Machine Learning"
     ]
   },
 
   /* ── Professional Experience ─────────────────────────────── */
   experience: [
     {
-      title: "Aerodynamics Engineering Intern",
-      company: "Boeing Commercial Airplanes",
-      division: "HiLACC, Cody Technology Park",
-      location: "Farnborough, UK",
-      period: "June 2026 – September 2026",
-      highlights: [
-        "Ran DMD (Dynamic Mode Decomposition) and SPOD (Spectral Proper Orthogonal Decomposition) analysis on unsteady CRM model simulation results to measure dominant flow structures and shedding frequencies.",
-        "Completed ground plane characterisation study on the impact of ground plane dimensions on ground effect aerodynamics and high-lift flight characteristics.",
-        "Modelled wind tunnel ground plane board, fairings, and model installations in CATIA v5 and ran CFD in FE lite.",
-        "Supported research into high-lift aerodynamics, buffet boundaries, aircraft wake analysis, and wind tunnel data interpretation at the 5-metre wind tunnel facility."
-      ]
-    },
-    {
+      id: "ucl-rover",
       title: "Lead Drone Engineer",
       company: "UCL Rover Team",
-      division: null,
       location: "London, UK",
       period: "February 2025 – Present",
-      highlights: [
-        "Designing an autonomous drone to fly in simulated Martian planetary environments; modelled structural airframe in Fusion 360 and conducted aerodynamic CFD on 3-blade props in Ansys Fluent.",
-        "Modelled flight control systems in MATLAB/Simulink; integrated ArUco computer vision marker recognition on Raspberry Pi to execute autonomous precision landings on a 1×1 m rover deck.",
-        "Programmed microcontroller calibration sequences (ESP32 and Arduino Mega), increasing robotic arm positioning precision by 25%."
-      ]
+      bullets: [
+        "Designing autonomous drone to fly in Martian environment, modelling frame in Fusion and conducting CFD on props in ANSYS.",
+        "Modelling control systems in Simulink, integrating ArUco marker detection to achieve landings on 1 x 1 m pad with Raspberry Pi.",
+        "Increased accuracy of robotic arm by 25% by programming calibration sequence on microcontrollers (ESP32 and Arduino Mega)."
+      ],
+      skills: ["Fusion 360", "ANSYS CFD", "Simulink", "Raspberry Pi", "ArUco Vision", "ESP32", "Arduino Mega"]
     },
     {
+      id: "boeing",
+      title: "Aerodynamics Engineering Intern",
+      company: "Boeing Commercial Airplanes",
+      location: "Farnborough, UK",
+      period: "June 2026 – September 2026",
+      bullets: [
+        "Contributed to development of SPOD/DMD Python package for post-processing of URANS simulations on NASA CRM model.",
+        "Conducted ground-plane (GP) characterisation study to investigate the effect of GP size on ground effect in wind-tunnel.",
+        "Modelled watertight aircraft and GP geometries in CATIA V5, prepared HeldenMesh meshes and used automated CFD solver.",
+        "Participated in technical design reviews with Chief Engineers and presented findings on transonic buffet and SBLI seen in Tecplot.",
+        "Supported wind tunnel testing of Check Standard Model, validating results up to M0.32 at 3 bar for increased Reynolds number."
+      ],
+      skills: ["CATIA V5", "HeldenMesh", "Tecplot", "Python", "SPOD / DMD", "Wind Tunnel Testing", "URANS CFD"]
+    },
+    {
+      id: "ge-aerospace",
       title: "Virtual Internship – Explore Engineering Programme",
       company: "GE Aerospace, Inc.",
-      division: null,
       location: "Virtual",
       period: "July 2025 – September 2025",
-      highlights: [
-        "Conducted propulsion comparative analysis for next-gen aviation fuels (SAF, Liquid Hydrogen, LNG) calculating cost, gravimetric energy density, and emissions per MJ.",
-        "Modelled and plotted supersonic fan tip velocities up to Mach 1.5 for ultra-high bypass engines (50:1 pressure ratio) in MATLAB.",
-        "Prepared technical presentation on high-bypass turbofan structural, aerodynamic, and acoustic boundaries (fan diameter constraints, flutter, material stress)."
-      ]
+      bullets: [
+        "Compared energy sources for propulsion systems (SAF, LH2, LNG, etc.) by calculating cost, energy density and emissions per MJ.",
+        "Calculated and plotted fan tip velocities up to M1.5 for engines with compression ratios of 50:1 using MATLAB.",
+        "Prepared presentation on limitations of bypass / compression ratios in turbofan engines (e.g. fan diameter, noise, material stress)."
+      ],
+      skills: ["MATLAB", "Propulsion Thermodynamics", "Aviation Energy Systems", "Structural Boundaries"]
     }
   ],
 
-  /* ── Projects ────────────────────────────────────────────── */
+  /* ── Selected Work & Technical Projects ──────────────────── */
   projects: [
     {
       id: "quadcopter",
-      title: "PID-Tuned Aerobatic Quadcopter",
-      category: "Robotics & Control",
-      period: "June 2025 – Present",
-      summary: "5-inch aerobatic quadcopter with CNC-machined CFRP airframe and 1750 KV brushless motors achieving an 8 : 1 thrust-to-weight ratio.",
-      highlights: [
-        "Designed and assembled 5-inch quadcopter using CNC-machined CFRP plates and 1750 KV motors to maintain T/W ratio of 8 : 1.",
-        "Reduced oscillations by 40 % by modelling PID control loops in Simulink and tuning in Betaflight to achieve stable flight dynamics.",
-        "Minimised parasitic / form drag by performing CFD on varying pitch angles of 3 / 4-blade props with Fusion 360 and Ansys Fluent."
+      title: "PID-Tuned Quadcopter",
+      date: "June 2025 – Present",
+      category: "Robotics & Controls",
+      shortDesc: "High-performance custom 5-inch aerobatic quadcopter with CNC CFRP airframe, dynamic Simulink modelling, and toroidal propeller CFD.",
+      bullets: [
+        "Designed and assembled 5-inch quadcopter using CNC-machined CFRP plates and 1750KV motors to achieve T/W ratio of 8:1.",
+        "Reduced oscillations by 40% by modelling PID control loops in Simulink and tuned in Betaflight to achieve stable flight dynamics.",
+        "Minimised form drag by performing CFD on varying pitch angles of 3/4-blade toroidal propellers in Fusion 360 and Ansys Fluent."
       ],
-      technologies: ["MATLAB / Simulink", "Ansys Fluent", "Fusion 360", "Betaflight", "CNC Machining", "CFRP"],
-      driveDocs: "https://drive.google.com/drive/folders/1i_qHLcf9Rqz36Fu3xkGmKzsKSOUM1kZw",
-      github: "https://github.com/rishitm05"
+      skills: ["Simulink", "Betaflight", "Ansys Fluent", "Fusion 360", "CNC CFRP", "PID Control"],
+      barClass: "pastel-terracotta",
+      iconClass: "fa-solid fa-drone",
+      image: "images/projects/quadcopter.png" // User can drop image here
     },
     {
-      id: "mars-drone",
-      title: "Mars Autonomous Exploration Drone",
-      category: "Robotics & Control",
-      period: "February 2025 – Present",
-      summary: "Autonomous aerial scout designed for simulated Martian environments with low-density propeller CFD and computer-vision precision landing.",
-      highlights: [
-        "Modelled structural airframe in Fusion 360 and conducted aerodynamic CFD on 3-blade propellers in Ansys Fluent for low-density Martian atmosphere.",
-        "Integrated ArUco computer vision marker recognition on Raspberry Pi to execute autonomous precision landings on a 1×1 m rover deck.",
-        "Programmed ESP32 firmware for autonomous flight control and sensor integration in simulated planetary environments."
-      ],
-      technologies: ["Ansys Fluent", "Fusion 360", "Raspberry Pi", "ESP32", "ArUco", "Python", "MATLAB / Simulink"],
-      driveDocs: "https://drive.google.com/drive/folders/1i_qHLcf9Rqz36Fu3xkGmKzsKSOUM1kZw",
-      github: "https://github.com/rishitm05"
-    },
-    {
-      id: "ev-charging",
-      title: "IMechE Automated EV Charging Mechanism",
+      id: "imeche-ev",
+      title: "Automated EV Charging Device",
+      date: "January 2025 – March 2025",
       category: "Mechanical & CAD",
-      period: "January 2025 – March 2025",
-      summary: "Autonomous docking vehicle for the IMechE Design Challenge with FEA-validated chassis and Python-modelled spring mechanics.",
-      highlights: [
+      shortDesc: "IMechE Design Challenge — Autonomous wall-detecting docking vehicle engineered with FEA-tested chassis and Python spring compression mechanics.",
+      bullets: [
         "Co-led a team of 5 to build a device that travels forward, detects a wall and returns using mechanisms and analogue circuitry.",
-        "Modelled chassis and powertrain in Fusion 360, producing engineering drawings and stress-tested with FEA (Safety Factor > 6).",
-        "Developed numerical model in Python to measure spring compressions under load, giving an ideal spring constant of 560 N/m.",
-        "Underwent design review, clarifying material choices for frame and design process behind spring-lead-screw mechanism."
+        "Modelled chassis and powertrain using Fusion 360, producing engineering drawings and evaluated using FEA (Safety Factor > 6).",
+        "Developed numerical model in Python to measure spring compressions under load, giving an ideal spring constant of 560 N/m."
       ],
-      technologies: ["Fusion 360", "FEA", "Python 3", "Engineering Drawings", "Analogue Circuitry"],
-      driveDocs: "https://drive.google.com/drive/folders/1i_qHLcf9Rqz36Fu3xkGmKzsKSOUM1kZw",
-      github: "https://github.com/rishitm05"
+      skills: ["Fusion 360", "FEA Analysis", "Python 3", "Analogue Circuitry", "Mechanism Design"],
+      barClass: "pastel-sandstone",
+      iconClass: "fa-solid fa-charging-station",
+      image: "images/projects/imeche-ev.png" // User can drop image here
     },
     {
       id: "wind-turbine",
       title: "Portable High-Efficiency Wind Turbine",
+      date: "January 2025",
       category: "Aerodynamics & CFD",
-      period: "January 2025",
-      summary: "Ranked 4th overall at UCL Autodesk Mechathon — custom airfoil blade design with CFD-optimised RPM and power output.",
-      highlights: [
-        "Competed in a multidisciplinary team of 7 to build a portable wind turbine generating the highest power, placing 4th overall.",
-        "Modelled blade profiles with optimised airfoil curvature in Fusion 360 and used Ansys Fluent to simulate maximum RPM and estimate power output.",
-        "3D-printed turbine blades with modified G-code to automate the process and laser-cut an acrylic-plywood base."
+      shortDesc: "UCL Autodesk Mechathon — 4th Place overall for a high-output portable turbine combining aerodynamic blade profiling, CFD simulation, and automated G-code manufacturing.",
+      bullets: [
+        "Competed in a multidisciplinary team of 7 to build a portable wind turbine optimised for power output, coming 4th overall.",
+        "Modelled blade profiles in Fusion 360 and used Ansys Fluent to simulate maximum RPM and estimate power output.",
+        "3D-printed turbine blades and modified G-code to automate the process and laser-cut an acrylic-plywood base."
       ],
-      technologies: ["Fusion 360", "Ansys Fluent", "3D Printing", "G-Code", "Laser Cutting"],
-      driveDocs: "https://drive.google.com/drive/folders/1i_qHLcf9Rqz36Fu3xkGmKzsKSOUM1kZw",
-      github: "https://github.com/rishitm05"
+      skills: ["Fusion 360", "Ansys Fluent", "3D Printing", "G-Code Automation", "Laser Cutting"],
+      barClass: "pastel-sage",
+      iconClass: "fa-solid fa-wind",
+      image: "images/projects/wind-turbine.png" // User can drop image here
     },
     {
-      id: "turbofan",
-      title: "GE Aerospace Turbofan Propulsion Analysis",
-      category: "Propulsion & Energy",
-      period: "July 2025 – September 2025",
-      summary: "MATLAB thermodynamic engine cycle modelling with supersonic fan tip analysis and alternative fuel lifecycle assessment.",
-      highlights: [
-        "Conducted propulsion comparative analysis for next-gen aviation fuels (SAF, LH₂, LNG) calculating cost, energy density, and emissions per MJ.",
-        "Modelled and plotted supersonic fan tip velocities up to Mach 1.5 for ultra-high bypass engines (50 : 1 OPR) in MATLAB.",
-        "Prepared technical presentation on high-bypass turbofan structural, aerodynamic, and acoustic boundaries."
+      id: "mars-drone-system",
+      title: "Mars Autonomous Exploration Drone",
+      date: "February 2025 – Present",
+      category: "Robotics & Autonomous Systems",
+      shortDesc: "UCL Rover Team — Planetary aerial scout with low-density propeller CFD, ArUco vision precision landing, and dual microcontroller architecture.",
+      bullets: [
+        "Engineered structural airframe in Fusion 360 and performed CFD in ANSYS on rotor performance in simulated Martian low-density atmosphere.",
+        "Integrated ArUco computer vision marker recognition with Raspberry Pi camera to achieve autonomous precision landings on 1 x 1 m rover pad.",
+        "Programmed microcontroller calibration sequences (ESP32 / Arduino Mega), boosting robotic arm positioning precision by 25%."
       ],
-      technologies: ["MATLAB", "Thermodynamics", "Propulsion Systems", "Alternative Fuels"],
-      driveDocs: "https://drive.google.com/drive/folders/1i_qHLcf9Rqz36Fu3xkGmKzsKSOUM1kZw",
-      github: "https://github.com/rishitm05"
+      skills: ["ANSYS CFD", "Raspberry Pi", "OpenCV / ArUco", "ESP32", "Arduino Mega", "Simulink"],
+      barClass: "pastel-slate",
+      iconClass: "fa-solid fa-satellite",
+      image: "images/projects/mars-drone.png" // User can drop image here
     }
   ],
 
-  /* ── Technical Skills ────────────────────────────────────── */
-  skills: {
-    "Engineering & Analysis": [
-      "CAD Modelling", "FEA Stress Analysis", "CFD (Fluid Dynamics)",
-      "Thermodynamics", "Fluid Mechanics", "Control Systems",
-      "PCB Design", "Materials Selection"
-    ],
-    "Software & Tools": [
-      "Ansys Fluent", "Autodesk Fusion 360", "CATIA v5", "FE lite",
-      "MATLAB", "Simulink", "Python 3", "KiCad", "Betaflight", "G-Code"
-    ],
-    "Aerodynamics & Propulsion": [
-      "DMD & SPOD Analysis", "High-Lift Aerodynamics", "Ground Effect Analysis",
-      "Wind Tunnel Testing", "Airfoil / Propeller Optimisation",
-      "Gas Turbines", "SAF & Hydrogen"
-    ],
-    "Manufacturing & Prototyping": [
-      "CNC Machining (CFRP)", "3D Printing / Additive Mfg", "Laser Cutting",
-      "Rapid Prototyping", "Embedded Systems (RPi, ESP32, Arduino)", "ArUco Vision"
-    ]
-  },
-
-  /* ── Filter Categories ───────────────────────────────────── */
-  categories: [
-    "All",
-    "Robotics & Control",
-    "Aerodynamics & CFD",
-    "Mechanical & CAD",
-    "Propulsion & Energy"
+  /* ── Skills & Tools (Categorised exactly as CV) ──────────── */
+  skillsCategories: [
+    {
+      category: "Engineering & Analysis",
+      skills: [
+        "CAD Modelling", "CFD Analysis", "FEA Stress Analysis",
+        "Meshing", "Thermodynamics", "Fluid Mechanics",
+        "Control Systems", "Mechanical Design"
+      ]
+    },
+    {
+      category: "Manufacturing & Prototyping",
+      skills: [
+        "CNC Machining", "3D Printing (Additive)", "Laser Cutting",
+        "RoboDK", "Prototyping", "Manufacturing Processes"
+      ]
+    },
+    {
+      category: "Software & Tools",
+      skills: [
+        "CATIA V5", "Fusion 360", "ANSYS Fluent", "HeldenMesh",
+        "Tecplot", "Git", "Linux", "Python", "MATLAB", "Simulink", "MS Office"
+      ]
+    },
+    {
+      category: "Aerodynamics & Control",
+      skills: [
+        "SPOD / DMD Analysis", "Wind Tunnel Testing", "URANS Simulations",
+        "ArUco Vision", "PID Tuning", "Betaflight", "Microcontrollers (ESP32/Mega)"
+      ]
+    }
   ]
 };

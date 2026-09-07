@@ -1,337 +1,284 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rishit Madireddy — Mechanical &amp; Aerospace Engineering</title>
-  <meta name="description" content="Portfolio of Rishit Madireddy — Mechanical &amp; Aerospace Engineering student at UCL specialising in Aerodynamics, CFD, Autonomous Robotics, and CAD/FEA.">
-  <meta name="author" content="Rishit Madireddy">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishit Madireddy — Portfolio</title>
+    <meta name="description" content="Portfolio of Rishit Madireddy — Mechanical &amp; Aerospace Engineering student at UCL specialising in Aerodynamics, Mechanical Design, Autonomous Robotics, and CFD/FEA.">
+    <meta name="author" content="Rishit Madireddy">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Rishit Madireddy — Mechanical &amp; Aerospace Engineering">
-  <meta property="og:description" content="Aerodynamics · CFD · Autonomous Robotics · CAD &amp; FEA">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rishitm05.github.io">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Rishit Madireddy — Portfolio">
+    <meta property="og:description" content="Mechanical &amp; Aerospace Engineering · Aerodynamics · Autonomous Robotics · CAD &amp; FEA">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rishitm05.github.io">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Google Fonts for Archivo, Newsreader & JetBrains Mono (Identical to Amit's stack) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz@1,6..72&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/style.css">
+    <!-- Swiss Editorial Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════════════════
-       NAVIGATION
-       ═══════════════════════════════════════════════════════ -->
-  <nav class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#hero" class="nav__logo">
-        <span class="nav__logo-text">RM</span>
-      </a>
-
-      <ul class="nav__links" id="nav-links">
-        <li><a href="#about" class="nav__link" data-section="about">About</a></li>
-        <li><a href="#experience" class="nav__link" data-section="experience">Experience</a></li>
-        <li><a href="#projects" class="nav__link" data-section="projects">Projects</a></li>
-        <li><a href="#skills" class="nav__link" data-section="skills">Skills</a></li>
-        <li><a href="#contact" class="nav__link" data-section="contact">Contact</a></li>
-      </ul>
-
-      <div class="nav__actions">
-        <button class="nav__theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-          <i data-lucide="moon" class="icon icon--moon"></i>
-          <i data-lucide="sun" class="icon icon--sun"></i>
-        </button>
-        <button class="nav__hamburger" id="nav-hamburger" aria-label="Open menu">
-          <i data-lucide="menu" class="icon"></i>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Mobile Drawer -->
-  <div class="drawer-overlay" id="drawer-overlay"></div>
-  <aside class="drawer" id="drawer">
-    <div class="drawer__header">
-      <span class="nav__logo-text">RM</span>
-      <button class="drawer__close" id="drawer-close" aria-label="Close menu">
-        <i data-lucide="x" class="icon"></i>
-      </button>
-    </div>
-    <ul class="drawer__links">
-      <li><a href="#about" class="drawer__link">About</a></li>
-      <li><a href="#experience" class="drawer__link">Experience</a></li>
-      <li><a href="#projects" class="drawer__link">Projects</a></li>
-      <li><a href="#skills" class="drawer__link">Skills</a></li>
-      <li><a href="#contact" class="drawer__link">Contact</a></li>
-    </ul>
-  </aside>
-
-  <main>
-
-    <!-- ═══════════════════════════════════════════════════════
-         HERO
-         ═══════════════════════════════════════════════════════ -->
-    <section class="hero" id="hero">
-      <div class="hero__grid-bg"></div>
-      <div class="container hero__content">
-        <p class="hero__greeting mono">Mechanical &amp; Aerospace Engineering</p>
-        <h1 class="hero__name" id="hero-name"></h1>
-        <div class="hero__disciplines" id="hero-disciplines"></div>
-        <p class="hero__summary" id="hero-summary"></p>
-        <div class="hero__actions">
-          <a href="#projects" class="btn btn--primary">
-            View Projects
-            <i data-lucide="arrow-down-right" class="icon icon--sm"></i>
-          </a>
-          <a href="#contact" class="btn btn--outline">
-            Get in Touch
-          </a>
+    <!-- Mobile Warning Banner -->
+    <div class="mobile-warning-banner" id="mobile-banner">
+        <div class="page-container" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0;">
+            <span>This portfolio is engineered with dense technical data and is best viewed on larger desktop displays.</span>
+            <button onclick="document.getElementById('mobile-banner').style.display='none'" style="background: none; border: none; color: inherit; cursor: pointer; font-size: 18px; font-weight: bold; padding: 0 4px;" aria-label="Close banner">×</button>
         </div>
-      </div>
-      <div class="hero__scroll-indicator">
-        <i data-lucide="chevrons-down" class="icon"></i>
-      </div>
-    </section>
+    </div>
 
-    <!-- ═══════════════════════════════════════════════════════
-         ABOUT
-         ═══════════════════════════════════════════════════════ -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__number mono">01</span>
-          <h2 class="section__title">About</h2>
-          <div class="section__line"></div>
+    <!-- Sticky Top Navigation Bar -->
+    <header class="top-nav-bar">
+        <div class="page-container" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;">
+            <a href="#hero" class="nav-brand mono-label">RISHIT MADIREDDY — PORTFOLIO</a>
+            <nav class="nav-links">
+                <a href="#about" class="jump-pill">01 · About</a>
+                <a href="#experience" class="jump-pill">02 · Experience</a>
+                <a href="#projects" class="jump-pill">03 · Selected Work</a>
+                <a href="#skills" class="jump-pill">04 · Skills</a>
+                <a href="#contact" class="jump-pill">05 · Contact</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="about__grid">
-          <div class="about__text">
-            <p id="about-text"></p>
-          </div>
-          <div class="about__sidebar">
-            <!-- Education Card -->
-            <div class="card about__edu-card">
-              <div class="card__icon-row">
-                <i data-lucide="graduation-cap" class="icon icon--accent"></i>
-                <span class="card__label mono" id="edu-year"></span>
-              </div>
-              <h3 class="card__title" id="edu-degree"></h3>
-              <p class="card__subtitle" id="edu-minor"></p>
-              <p class="card__meta" id="edu-institution"></p>
-              <p class="card__meta" id="edu-period"></p>
-              <div class="card__badge">
-                <i data-lucide="award" class="icon icon--sm"></i>
-                <span id="edu-grade"></span>
-              </div>
-              <div class="card__badge card__badge--accent">
-                <i data-lucide="trophy" class="icon icon--sm"></i>
-                <span id="edu-scholarship"></span>
-              </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="section-bleed" id="hero" style="padding-top: 64px; padding-bottom: 56px;">
+            <div class="page-container reveal" style="text-align: center;">
+                <h1 class="hero-h1 mb-4" id="hero-name">Rishit Madireddy</h1>
+                <div class="hero-subtitle mb-0" id="hero-tagline" style="text-align: center; margin-inline: auto;">
+                    Mechanical, Aerospace &amp; Robotics Systems Engineer.
+                </div>
+            </div>
+        </section>
+
+        <!-- 01 — ABOUT Section -->
+        <section class="section-bleed section-alt" id="about">
+            <div class="page-container">
+                <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4 reveal">
+                    <div>
+                        <div class="mono-accent mb-2">SECTION 01</div>
+                        <h2 class="section-title-h2">About Me</h2>
+                    </div>
+                    <div class="mono-label" id="about-clearance-label">
+                        UK BPSS CLEARED · UCL 2024–2029
+                    </div>
+                </div>
+
+                <!-- About Teaser Grid -->
+                <div class="about-grid reveal delay-1">
+                    <div>
+                        <p class="lead-p mb-6" id="about-lead" style="color: var(--ink); font-weight: 600;">
+                            <!-- Populated by JS -->
+                        </p>
+                        <p class="body-p mb-6" id="about-body">
+                            <!-- Populated by JS -->
+                        </p>
+
+                        <!-- Education Summary Card -->
+                        <div style="background-color: var(--card-bg); border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin-bottom: 24px;">
+                            <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
+                                <div>
+                                    <h4 class="item-h3" style="font-size: 17px;" id="edu-degree"></h4>
+                                    <p class="mono-accent" style="font-size: 11px; margin-top: 2px;" id="edu-institution"></p>
+                                </div>
+                                <span class="mono-label" id="edu-period"></span>
+                            </div>
+                            <div class="edu-badge-row">
+                                <span class="edu-badge" id="edu-grade"><i class="fa-solid fa-graduation-cap"></i> First Class Expected</span>
+                                <span class="edu-badge edu-badge--accent" id="edu-scholarship"><i class="fa-solid fa-award"></i> 2022 Arkwright Scholar</span>
+                                <span class="edu-badge"><i class="fa-solid fa-shield-halved"></i> UK BPSS Cleared</span>
+                            </div>
+                            <div style="margin-top: 14px;">
+                                <span class="mono-label" style="font-size: 10.5px;">Relevant Modules:</span>
+                                <div class="module-pills-container" id="modules-list">
+                                    <!-- Populated by JS -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4 items-center">
+                            <a href="#contact" class="btn-solid">Get in Touch <i class="fa-solid fa-arrow-right"></i></a>
+                            <a href="https://drive.google.com/drive/folders/1i_qHLcf9Rqz36Fu3xkGmKzsKSOUM1kZw" target="_blank" rel="noopener noreferrer" class="pill-btn">
+                                <i class="fa-solid fa-folder-open"></i> Projects Drive ↗
+                            </a>
+                            <a href="https://github.com/rishitm05" target="_blank" rel="noopener noreferrer" class="pill-btn">
+                                <i class="fa-brands fa-github"></i> GitHub ↗
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Profile Photo / Placeholder -->
+                    <div>
+                        <div class="profile-photo-container" id="profile-container">
+                            <!-- Image if present, else neat architectural placeholder -->
+                            <div class="profile-photo-placeholder" id="profile-placeholder">
+                                <i class="fa-solid fa-user-gear" style="font-size: 40px; color: var(--accent); opacity: 0.85;"></i>
+                                <span class="mono-label" style="font-size: 12px; color: var(--ink); font-weight: 700;">Rishit Madireddy</span>
+                                <span style="font-size: 12px; color: var(--muted); max-width: 220px; line-height: 1.4;">
+                                    MEng Mechanical Engineering<br>Minor in Robotics · UCL
+                                </span>
+                            </div>
+                            <div class="caption-banner">
+                                Rishit Madireddy · UCL Mechanical &amp; Aerospace Engineering
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02 — EXPERIENCE Section -->
+        <section class="section-bleed" id="experience">
+            <div class="page-container">
+                <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4 reveal">
+                    <div>
+                        <div class="mono-accent mb-2">SECTION 02</div>
+                        <h2 class="section-title-h2">Professional Experience</h2>
+                    </div>
+                    <div class="mono-label">
+                        INDUSTRY &amp; TEAM LEADERSHIP
+                    </div>
+                </div>
+
+                <!-- Experience Cards List -->
+                <div class="exp-grid" id="experience-container">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 — SELECTED WORK & PROJECTS Section -->
+        <section class="section-bleed section-alt" id="projects">
+            <div class="page-container">
+                <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4 reveal">
+                    <div>
+                        <div class="mono-accent mb-2">SECTION 03</div>
+                        <h2 class="section-title-h2">Selected Work &amp; Projects</h2>
+                    </div>
+                    <div class="mono-label">
+                        2025 — PRESENT
+                    </div>
+                </div>
+
+                <!-- Project Cards Grid (Matches Amit's card design) -->
+                <div class="project-card-grid" id="projects-container">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 04 — SKILLS & TOOLS Section -->
+        <section class="section-bleed" id="skills">
+            <div class="page-container">
+                <div class="mb-10 border-b pb-6 reveal">
+                    <div class="mono-accent mb-2">SECTION 04</div>
+                    <h2 class="section-title-h2">Technical Skills &amp; Tools</h2>
+                </div>
+
+                <div class="skills-grid-4col" id="skills-container">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 05 — CONTACT Section (Matches Amit's dark stone block) -->
+        <section class="section-bleed" id="contact">
+            <div class="page-container">
+                <div class="contact-block reveal">
+                    <div>
+                        <div class="mono-accent mb-4" style="color: #FF6B4A;">SECTION 05 · CONTACT</div>
+                        <h2 class="hero-h1 mb-6" style="color: var(--paper); font-size: clamp(32px, 5.5vw, 64px);">
+                            Let's connect.
+                        </h2>
+                        <p class="lead-p mb-4" style="color: rgba(221, 213, 195, 0.85); max-width: 680px;">
+                            I am actively seeking engineering placements, internships, and research collaborations across mechanical design, aerodynamics, autonomous robotics, and aerospace propulsion.
+                        </p>
+                        <p class="body-p" style="color: rgba(221, 213, 195, 0.65); font-family: var(--font-mono); font-size: 12px;">
+                            LOCATION: London, UK &nbsp;·&nbsp; STATUS: UK BPSS Cleared
+                        </p>
+                    </div>
+
+                    <div class="contact-links-row">
+                        <button class="contact-link" id="copy-email-btn" style="background: none; border-top: none; border-left: none; border-right: none; font-size: inherit;">
+                            <i class="fa-solid fa-envelope"></i>
+                            <span id="contact-email-text">rmadireddy05@gmail.com</span>
+                            <span style="font-family: var(--font-mono); font-size: 11px; opacity: 0.7;">(Click to Copy)</span>
+                        </button>
+                        <a href="tel:+447459110597" class="contact-link">
+                            <i class="fa-solid fa-phone"></i> +44 7459 110597
+                        </a>
+                        <a href="https://www.linkedin.com/in/rishit-madireddy/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <i class="fa-brands fa-linkedin"></i> LinkedIn ↗
+                        </a>
+                        <a href="https://github.com/rishitm05" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <i class="fa-brands fa-github"></i> GitHub ↗
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/1i_qHLcf9Rqz36Fu3xkGmKzsKSOUM1kZw" target="_blank" rel="noopener noreferrer" class="contact-link">
+                            <i class="fa-solid fa-folder-open"></i> Projects Drive ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="page-container">
+            <div class="mono-label" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <span>&copy; <span id="footer-year">2026</span> RISHIT MADIREDDY</span>
+                <span>MECHANICAL &amp; AEROSPACE ENGINEERING · UCL</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Project Modal -->
+    <div class="modal-overlay" id="project-modal-overlay" hidden>
+        <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
+            <button class="modal-close" id="modal-close-btn" aria-label="Close dialog">&times;</button>
+            <div class="mono-accent mb-2" id="modal-project-category"></div>
+            <h3 class="section-title-h2 mb-2" id="modal-project-title" style="font-size: 24px;"></h3>
+            <span class="mono-label mb-6" style="display: block; color: var(--accent);" id="modal-project-date"></span>
+
+            <p class="body-p mb-6" id="modal-project-desc" style="color: var(--ink); font-weight: 500;"></p>
+
+            <div class="mb-6">
+                <div class="mono-label mb-3" style="color: var(--ink);">Engineering Technical Highlights</div>
+                <ul class="exp-bullets" id="modal-project-bullets" style="margin-top: 0;"></ul>
             </div>
 
-            <!-- Modules (collapsible) -->
-            <details class="about__modules">
-              <summary class="about__modules-toggle mono">
-                Relevant Modules
-                <i data-lucide="chevron-down" class="icon icon--sm"></i>
-              </summary>
-              <ul class="about__modules-list" id="modules-list"></ul>
-            </details>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════
-         EXPERIENCE
-         ═══════════════════════════════════════════════════════ -->
-    <section class="section section--alt" id="experience">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__number mono">02</span>
-          <h2 class="section__title">Experience</h2>
-          <div class="section__line"></div>
-        </div>
-        <div class="experience__timeline" id="experience-timeline"></div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════
-         PROJECTS
-         ═══════════════════════════════════════════════════════ -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__number mono">03</span>
-          <h2 class="section__title">Projects</h2>
-          <div class="section__line"></div>
-        </div>
-
-        <!-- Search & Filters -->
-        <div class="projects__controls">
-          <div class="projects__search">
-            <i data-lucide="search" class="icon icon--sm"></i>
-            <input
-              type="text"
-              id="project-search"
-              class="projects__search-input"
-              placeholder="Search projects…"
-              autocomplete="off"
-            >
-          </div>
-          <div class="projects__filters" id="project-filters"></div>
-        </div>
-
-        <!-- Project Grid -->
-        <div class="projects__grid" id="projects-grid"></div>
-        <p class="projects__empty" id="projects-empty" hidden>No projects match your search.</p>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════
-         SKILLS
-         ═══════════════════════════════════════════════════════ -->
-    <section class="section section--alt" id="skills">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__number mono">04</span>
-          <h2 class="section__title">Skills</h2>
-          <div class="section__line"></div>
-        </div>
-        <div class="skills__grid" id="skills-grid"></div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════
-         CONTACT
-         ═══════════════════════════════════════════════════════ -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__number mono">05</span>
-          <h2 class="section__title">Contact</h2>
-          <div class="section__line"></div>
-        </div>
-
-        <div class="contact__grid">
-          <div class="contact__intro">
-            <p>I'm always open to discussing engineering projects, research opportunities, or collaborative work. Feel free to reach out.</p>
-          </div>
-          <div class="contact__cards">
-            <!-- Email -->
-            <button class="contact__card" id="copy-email-btn">
-              <i data-lucide="mail" class="icon icon--accent"></i>
-              <div>
-                <span class="contact__card-label mono">Email</span>
-                <span class="contact__card-value" id="contact-email"></span>
-              </div>
-              <span class="contact__copy-hint mono">
-                <i data-lucide="copy" class="icon icon--xs"></i>
-                Copy
-              </span>
-            </button>
-            <!-- Phone -->
-            <a class="contact__card" id="contact-phone-card" href="">
-              <i data-lucide="phone" class="icon icon--accent"></i>
-              <div>
-                <span class="contact__card-label mono">Phone</span>
-                <span class="contact__card-value" id="contact-phone"></span>
-              </div>
-            </a>
-            <!-- Location -->
-            <div class="contact__card">
-              <i data-lucide="map-pin" class="icon icon--accent"></i>
-              <div>
-                <span class="contact__card-label mono">Location</span>
-                <span class="contact__card-value" id="contact-location"></span>
-              </div>
+            <div class="mb-6">
+                <div class="mono-label mb-3" style="color: var(--ink);">Technologies &amp; Tools Used</div>
+                <div class="flex flex-wrap gap-2" id="modal-project-skills"></div>
             </div>
-          </div>
-          <div class="contact__links">
-            <a href="" class="btn btn--outline" id="contact-github" target="_blank" rel="noopener noreferrer">
-              <i data-lucide="github" class="icon icon--sm"></i>
-              GitHub
-            </a>
-            <a href="" class="btn btn--outline" id="contact-linkedin" target="_blank" rel="noopener noreferrer">
-              <i data-lucide="linkedin" class="icon icon--sm"></i>
-              LinkedIn
-            </a>
-            <a href="" class="btn btn--outline" id="contact-drive" target="_blank" rel="noopener noreferrer">
-              <i data-lucide="folder-open" class="icon icon--sm"></i>
-              Projects Drive
-            </a>
-          </div>
+
+            <div class="flex gap-4 pt-6 border-t flex-wrap">
+                <a href="https://drive.google.com/drive/folders/1i_qHLcf9Rqz36Fu3xkGmKzsKSOUM1kZw" target="_blank" rel="noopener noreferrer" class="btn-solid">
+                    <i class="fa-solid fa-folder-open"></i> View CAD &amp; CFD Files in Drive ↗
+                </a>
+                <a href="https://github.com/rishitm05" target="_blank" rel="noopener noreferrer" class="pill-btn">
+                    <i class="fa-brands fa-github"></i> GitHub Repository ↗
+                </a>
+            </div>
         </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ═══════════════════════════════════════════════════════
-       FOOTER
-       ═══════════════════════════════════════════════════════ -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p class="footer__copy mono">&copy; <span id="footer-year"></span> Rishit Madireddy</p>
-      <div class="footer__links">
-        <a href="" id="footer-github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <i data-lucide="github" class="icon icon--sm"></i>
-        </a>
-        <a href="" id="footer-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <i data-lucide="linkedin" class="icon icon--sm"></i>
-        </a>
-      </div>
     </div>
-  </footer>
 
-  <!-- ═══════════════════════════════════════════════════════
-       PROJECT MODAL
-       ═══════════════════════════════════════════════════════ -->
-  <div class="modal-overlay" id="modal-overlay" hidden>
-    <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal__close" id="modal-close" aria-label="Close modal">
-        <i data-lucide="x" class="icon"></i>
-      </button>
-
-      <div class="modal__header">
-        <span class="modal__category mono" id="modal-category"></span>
-        <h2 class="modal__title" id="modal-title"></h2>
-        <span class="modal__period mono" id="modal-period"></span>
-      </div>
-
-      <p class="modal__summary" id="modal-summary"></p>
-
-      <div class="modal__section">
-        <h3 class="modal__section-title">Key Contributions</h3>
-        <ul class="modal__highlights" id="modal-highlights"></ul>
-      </div>
-
-      <div class="modal__section">
-        <h3 class="modal__section-title">Technologies</h3>
-        <div class="modal__tags" id="modal-tags"></div>
-      </div>
-
-      <div class="modal__actions" id="modal-actions"></div>
+    <!-- Toast Notification for Copy -->
+    <div class="toast" id="copy-toast" role="status">
+        <i class="fa-solid fa-check"></i>
+        <span>Copied rmadireddy05@gmail.com to clipboard!</span>
     </div>
-  </div>
 
-  <!-- ═══════════════════════════════════════════════════════
-       TOAST
-       ═══════════════════════════════════════════════════════ -->
-  <div class="toast" id="toast" aria-live="polite">
-    <i data-lucide="check" class="icon icon--sm"></i>
-    <span>Email copied to clipboard</span>
-  </div>
-
-  <!-- Scripts -->
-  <script src="js/data.js"></script>
-  <script src="js/app.js"></script>
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
