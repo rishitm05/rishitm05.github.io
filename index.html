@@ -50,7 +50,7 @@
     <main>
         <!-- Hero Section -->
         <section class="section-bleed" id="hero" style="padding-top: 64px; padding-bottom: 48px; background: linear-gradient(180deg, #ffffff 0%, #f0f7ff 100%); border-bottom: 1px solid var(--line);">
-            <div class="page-container reveal" style="text-align: center;">
+            <div class="page-container" style="text-align: center;">
                 <div class="flex justify-center mb-4">
                     <span class="badge-bpss">
                         <i class="fa-solid fa-shield-halved"></i> UK BPSS SECURITY CLEARED
@@ -77,7 +77,7 @@
         <!-- 01 — ABOUT Section -->
         <section class="section-bleed" id="about">
             <div class="page-container">
-                <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4 reveal">
+                <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4">
                     <div>
                         <div class="mono-accent mb-2">SECTION 01</div>
                         <h2 class="section-title-h2">About Me</h2>
@@ -88,13 +88,13 @@
                     </div>
                 </div>
 
-                <div class="about-grid reveal delay-1">
+                <div class="about-grid">
                     <div>
                         <p class="lead-p mb-6" id="about-lead">
-                            <!-- Populated by JS -->
+                            Third-year Mechanical Engineering student at UCL and 2022 Arkwright Engineering Scholar with experience at Boeing as an Aerodynamics Engineering Intern and a virtual internship at GE Aerospace.
                         </p>
                         <p class="body-p mb-8" id="about-body">
-                            <!-- Populated by JS -->
+                            Skilled in CAD, CFD, MATLAB/Simulink and Python, demonstrated in industry and projects such as a PID-tuned quadcopter, EV charging device and wind turbine. Currently serving as Lead Drone Engineer at UCL Rover Team for aerodynamics and autonomous subsystems with further expertise in mechanical design, testing and systems engineering.
                         </p>
 
                         <div class="flex flex-wrap gap-4 items-center">
@@ -129,7 +129,7 @@
         <!-- 02 — EDUCATION Section (Dedicated Section) -->
         <section class="section-bleed section-alt" id="education">
             <div class="page-container">
-                <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4 reveal">
+                <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4">
                     <div>
                         <div class="mono-accent mb-2">SECTION 02</div>
                         <h2 class="section-title-h2">Education &amp; Credentials</h2>
@@ -137,7 +137,7 @@
                     <div class="mono-label">UNIVERSITY COLLEGE LONDON</div>
                 </div>
 
-                <div class="education-card reveal delay-1">
+                <div class="education-card">
                     <div class="flex justify-between items-start flex-wrap gap-4 mb-4">
                         <div>
                             <h3 class="item-h3" style="font-size: 21px;" id="edu-course">
@@ -170,7 +170,15 @@
                             Relevant Coursework &amp; Modules:
                         </span>
                         <div class="module-pills-container" id="modules-list">
-                            <!-- Populated by JS -->
+                            <span class="module-pill">Dynamics and Control</span>
+                            <span class="module-pill">Mathematical Modelling and Analysis</span>
+                            <span class="module-pill">Thermodynamics and Fluid Mechanics</span>
+                            <span class="module-pill">Mechanics of Solids</span>
+                            <span class="module-pill">Manufacturing and Design</span>
+                            <span class="module-pill">Engineering Materials</span>
+                            <span class="module-pill">Instrumentation</span>
+                            <span class="module-pill">Design and Professional Skills</span>
+                            <span class="module-pill">Robotics and Machine Learning</span>
                         </div>
                     </div>
                 </div>
@@ -180,7 +188,7 @@
         <!-- 03 — PROFESSIONAL EXPERIENCE Section -->
         <section class="section-bleed" id="experience">
             <div class="page-container">
-                <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4 reveal">
+                <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4">
                     <div>
                         <div class="mono-accent mb-2">SECTION 03</div>
                         <h2 class="section-title-h2">Professional Experience</h2>
@@ -189,7 +197,97 @@
                 </div>
 
                 <div class="exp-grid" id="experience-container">
-                    <!-- Populated by JS -->
+                    <!-- Aerodynamics Engineering Intern at Boeing -->
+                    <div class="exp-card">
+                        <div>
+                            <div class="exp-card-header">
+                                <div>
+                                    <h4 class="item-h3">Aerodynamics Engineering Intern</h4>
+                                    <p class="exp-card-company">Boeing Commercial Airplanes · HiLACC, Cody Technology Park</p>
+                                </div>
+                                <div class="exp-card-meta">
+                                    <span class="mono-accent">June 2026 – September 2026</span>
+                                    <span class="mono-label" style="font-size: 10.5px;">Farnborough, UK</span>
+                                </div>
+                            </div>
+                            <ul class="exp-bullets">
+                                <li class="exp-bullet">Contributed to development of SPOD/DMD Python package for post-processing of URANS simulations on NASA CRM model.</li>
+                                <li class="exp-bullet">Conducted ground-plane (GP) characterisation study to investigate the effect of GP size on ground effect in wind-tunnel.</li>
+                                <li class="exp-bullet">Modelled watertight aircraft and GP geometries in CATIA V5, prepared HeldenMesh meshes and used automated CFD solver.</li>
+                                <li class="exp-bullet">Participated in technical design reviews with Chief Engineers and presented findings on transonic buffet and SBLI seen in Tecplot.</li>
+                                <li class="exp-bullet">Supported wind tunnel testing of Check Standard Model, validating results up to M0.32 at 3 bar for increased Reynolds number.</li>
+                            </ul>
+                        </div>
+                        <div class="exp-skills-row">
+                            <span class="mono-label" style="font-size: 10px; margin-right: 4px; color: var(--primary);">SKILLS / TOOLS:</span>
+                            <span class="pill-chip">CATIA V5</span>
+                            <span class="pill-chip">HeldenMesh</span>
+                            <span class="pill-chip">Tecplot</span>
+                            <span class="pill-chip">Python</span>
+                            <span class="pill-chip">SPOD / DMD</span>
+                            <span class="pill-chip">Wind Tunnel Testing</span>
+                            <span class="pill-chip">URANS CFD</span>
+                        </div>
+                    </div>
+
+                    <!-- Lead Drone Engineer and Team Manager at UCL Rover Team -->
+                    <div class="exp-card">
+                        <div>
+                            <div class="exp-card-header">
+                                <div>
+                                    <h4 class="item-h3">Lead Drone Engineer and Team Manager</h4>
+                                    <p class="exp-card-company">UCL Rover Team</p>
+                                </div>
+                                <div class="exp-card-meta">
+                                    <span class="mono-accent">February 2025 – Present</span>
+                                    <span class="mono-label" style="font-size: 10.5px;">London, UK</span>
+                                </div>
+                            </div>
+                            <ul class="exp-bullets">
+                                <li class="exp-bullet">Designing autonomous drone to fly in Martian environment, modelling frame in Fusion and conducting CFD on props in ANSYS.</li>
+                                <li class="exp-bullet">Modelling control systems in Simulink, integrating ArUco marker detection to achieve landings on 1 x 1 m pad with Raspberry Pi.</li>
+                                <li class="exp-bullet">Increased accuracy of robotic arm by 25% by programming calibration sequence on microcontrollers (ESP32 and Arduino Mega).</li>
+                            </ul>
+                        </div>
+                        <div class="exp-skills-row">
+                            <span class="mono-label" style="font-size: 10px; margin-right: 4px; color: var(--primary);">SKILLS / TOOLS:</span>
+                            <span class="pill-chip">Fusion 360</span>
+                            <span class="pill-chip">ANSYS CFD</span>
+                            <span class="pill-chip">Simulink</span>
+                            <span class="pill-chip">Raspberry Pi</span>
+                            <span class="pill-chip">ArUco Vision</span>
+                            <span class="pill-chip">ESP32</span>
+                            <span class="pill-chip">Arduino Mega</span>
+                        </div>
+                    </div>
+
+                    <!-- Virtual Internship at GE Aerospace -->
+                    <div class="exp-card">
+                        <div>
+                            <div class="exp-card-header">
+                                <div>
+                                    <h4 class="item-h3">Virtual Internship – Explore Engineering Programme</h4>
+                                    <p class="exp-card-company">GE Aerospace, Inc.</p>
+                                </div>
+                                <div class="exp-card-meta">
+                                    <span class="mono-accent">July 2025 – September 2025</span>
+                                    <span class="mono-label" style="font-size: 10.5px;">Virtual</span>
+                                </div>
+                            </div>
+                            <ul class="exp-bullets">
+                                <li class="exp-bullet">Compared energy sources for propulsion systems (SAF, LH2, LNG, etc.) by calculating cost, energy density and emissions per MJ.</li>
+                                <li class="exp-bullet">Calculated and plotted fan tip velocities up to M1.5 for engines with compression ratios of 50:1 using MATLAB.</li>
+                                <li class="exp-bullet">Prepared presentation on limitations of bypass / compression ratios in turbofan engines (e.g. fan diameter, noise, material stress).</li>
+                            </ul>
+                        </div>
+                        <div class="exp-skills-row">
+                            <span class="mono-label" style="font-size: 10px; margin-right: 4px; color: var(--primary);">SKILLS / TOOLS:</span>
+                            <span class="pill-chip">MATLAB</span>
+                            <span class="pill-chip">Propulsion Thermodynamics</span>
+                            <span class="pill-chip">Aviation Energy Systems</span>
+                            <span class="pill-chip">Structural Boundaries</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -197,7 +295,7 @@
         <!-- 04 — PROJECTS Section -->
         <section class="section-bleed section-alt" id="projects">
             <div class="page-container">
-                <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4 reveal">
+                <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4">
                     <div>
                         <div class="mono-accent mb-2">SECTION 04</div>
                         <h2 class="section-title-h2">Projects</h2>
@@ -206,7 +304,180 @@
                 </div>
 
                 <div class="project-card-grid" id="projects-container">
-                    <!-- Populated by JS -->
+                    <!-- Project 1: Quadcopter -->
+                    <article class="project-card" onclick="openModalById('quadcopter')">
+                        <div class="project-card-img-wrap" id="img-wrap-quadcopter">
+                            <div class="project-placeholder">
+                                <i class="fa-solid fa-plane-up"></i>
+                                <span>ROBOTICS &amp; CONTROLS</span>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <div>
+                                <div class="project-card-header">
+                                    <span class="mono-accent" style="font-size: 10px;">Robotics &amp; Controls</span>
+                                    <h3 class="project-card-title">PID-Tuned Quadcopter</h3>
+                                    <span class="project-card-date">June 2025 – Present</span>
+                                </div>
+                                <p class="project-card-desc">High-performance custom 5-inch aerobatic quadcopter with CNC-machined CFRP airframe, dynamic Simulink modelling, and toroidal propeller CFD.</p>
+                                <ul class="project-card-bullets">
+                                    <li>Designed and assembled 5-inch quadcopter using CNC-machined CFRP plates and 1750KV motors to achieve T/W ratio of 8:1.</li>
+                                    <li>Reduced oscillations by 40% by modelling PID control loops in Simulink and tuned in Betaflight to achieve stable flight dynamics.</li>
+                                </ul>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <span class="mono-label" style="font-size: 11px; color: var(--primary); font-weight: 700;">
+                                    VIEW TECHNICAL ARCHITECTURE &rarr;
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project-card-skills-bar">
+                            <span class="pill-chip">Simulink</span>
+                            <span class="pill-chip">Betaflight</span>
+                            <span class="pill-chip">Ansys Fluent</span>
+                            <span class="pill-chip">Fusion 360</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: EV Charging -->
+                    <article class="project-card" onclick="openModalById('imeche-ev')">
+                        <div class="project-card-img-wrap" id="img-wrap-imeche-ev">
+                            <div class="project-placeholder">
+                                <i class="fa-solid fa-charging-station"></i>
+                                <span>MECHANICAL &amp; CAD</span>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <div>
+                                <div class="project-card-header">
+                                    <span class="mono-accent" style="font-size: 10px;">Mechanical &amp; CAD</span>
+                                    <h3 class="project-card-title">Automated EV Charging Device</h3>
+                                    <span class="project-card-date">January 2025 – March 2025</span>
+                                </div>
+                                <p class="project-card-desc">Autonomous wall-detecting docking vehicle engineered with FEA-tested chassis and Python spring compression mechanics for the IMechE Design Challenge.</p>
+                                <ul class="project-card-bullets">
+                                    <li>Co-led a team of 5 to build a device that travels forward, detects a wall and returns using mechanisms and analogue circuitry.</li>
+                                    <li>Modelled chassis and powertrain using Fusion 360, producing engineering drawings and evaluated using FEA (Safety Factor > 6).</li>
+                                </ul>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <span class="mono-label" style="font-size: 11px; color: var(--primary); font-weight: 700;">
+                                    VIEW TECHNICAL ARCHITECTURE &rarr;
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project-card-skills-bar">
+                            <span class="pill-chip">Fusion 360</span>
+                            <span class="pill-chip">FEA Analysis</span>
+                            <span class="pill-chip">Python 3</span>
+                            <span class="pill-chip">Analogue Circuitry</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Wind Turbine -->
+                    <article class="project-card" onclick="openModalById('wind-turbine')">
+                        <div class="project-card-img-wrap" id="img-wrap-wind-turbine">
+                            <div class="project-placeholder">
+                                <i class="fa-solid fa-wind"></i>
+                                <span>AERODYNAMICS &amp; CFD</span>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <div>
+                                <div class="project-card-header">
+                                    <span class="mono-accent" style="font-size: 10px;">Aerodynamics &amp; CFD</span>
+                                    <h3 class="project-card-title">Portable High-Efficiency Wind Turbine</h3>
+                                    <span class="project-card-date">January 2025</span>
+                                </div>
+                                <p class="project-card-desc">UCL Autodesk Mechathon (4th Place overall) — custom aerodynamic blade profiling, RPM and power output CFD simulations, and automated G-code manufacturing.</p>
+                                <ul class="project-card-bullets">
+                                    <li>Competed in a multidisciplinary team of 7 to build a portable wind turbine optimised for power output, coming 4th overall.</li>
+                                    <li>Modelled blade profiles in Fusion 360 and used Ansys Fluent to simulate maximum RPM and estimate power output.</li>
+                                </ul>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <span class="mono-label" style="font-size: 11px; color: var(--primary); font-weight: 700;">
+                                    VIEW TECHNICAL ARCHITECTURE &rarr;
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project-card-skills-bar">
+                            <span class="pill-chip">Fusion 360</span>
+                            <span class="pill-chip">Ansys Fluent</span>
+                            <span class="pill-chip">3D Printing</span>
+                            <span class="pill-chip">G-Code</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Mars Drone -->
+                    <article class="project-card" onclick="openModalById('mars-drone-system')">
+                        <div class="project-card-img-wrap" id="img-wrap-mars-drone-system">
+                            <div class="project-placeholder">
+                                <i class="fa-solid fa-satellite"></i>
+                                <span>ROBOTICS &amp; AUTONOMOUS SYSTEMS</span>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <div>
+                                <div class="project-card-header">
+                                    <span class="mono-accent" style="font-size: 10px;">Robotics &amp; Autonomous Systems</span>
+                                    <h3 class="project-card-title">Mars Autonomous Exploration Drone</h3>
+                                    <span class="project-card-date">February 2025 – Present</span>
+                                </div>
+                                <p class="project-card-desc">UCL Rover Team — Planetary aerial scout with low-density rotor CFD, ArUco vision precision landing, and dual microcontroller flight architecture.</p>
+                                <ul class="project-card-bullets">
+                                    <li>Engineered structural airframe in Fusion 360 and conducted aerodynamic CFD in ANSYS on 3-blade props in simulated Martian low-density atmosphere.</li>
+                                    <li>Integrated ArUco computer vision marker recognition with Raspberry Pi camera to achieve autonomous precision landings on 1 x 1 m rover pad.</li>
+                                </ul>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <span class="mono-label" style="font-size: 11px; color: var(--primary); font-weight: 700;">
+                                    VIEW TECHNICAL ARCHITECTURE &rarr;
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project-card-skills-bar">
+                            <span class="pill-chip">ANSYS CFD</span>
+                            <span class="pill-chip">Raspberry Pi</span>
+                            <span class="pill-chip">OpenCV / ArUco</span>
+                            <span class="pill-chip">ESP32</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Turbofan -->
+                    <article class="project-card" onclick="openModalById('turbofan-propulsion')">
+                        <div class="project-card-img-wrap" id="img-wrap-turbofan-propulsion">
+                            <div class="project-placeholder">
+                                <i class="fa-solid fa-gauge-high"></i>
+                                <span>THERMODYNAMICS &amp; ENERGY</span>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <div>
+                                <div class="project-card-header">
+                                    <span class="mono-accent" style="font-size: 10px;">Thermodynamics &amp; Energy</span>
+                                    <h3 class="project-card-title">Turbofan Propulsion &amp; Alternative Aviation Fuels</h3>
+                                    <span class="project-card-date">July 2025 – September 2025</span>
+                                </div>
+                                <p class="project-card-desc">Comprehensive propulsion cycle comparative analysis evaluating SAF, LH2, and supersonic fan tip aerodynamics for 50:1 ultra-high bypass engines.</p>
+                                <ul class="project-card-bullets">
+                                    <li>Conducted propulsion comparative analysis for next-gen aviation fuels (SAF, Liquid Hydrogen, LNG) calculating cost, gravimetric energy density, and emissions per MJ.</li>
+                                    <li>Modelled and plotted supersonic fan tip velocities up to Mach 1.5 for ultra-high bypass engines (50:1 pressure ratio) in MATLAB.</li>
+                                </ul>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <span class="mono-label" style="font-size: 11px; color: var(--primary); font-weight: 700;">
+                                    VIEW TECHNICAL ARCHITECTURE &rarr;
+                                </span>
+                            </div>
+                        </div>
+                        <div class="project-card-skills-bar">
+                            <span class="pill-chip">MATLAB</span>
+                            <span class="pill-chip">Thermodynamics</span>
+                            <span class="pill-chip">Propulsion Cycles</span>
+                            <span class="pill-chip">Alternative Fuels</span>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -214,13 +485,67 @@
         <!-- 05 — TECHNICAL SKILLS Section -->
         <section class="section-bleed" id="skills">
             <div class="page-container">
-                <div class="mb-10 border-b pb-6 reveal">
+                <div class="mb-10 border-b pb-6">
                     <div class="mono-accent mb-2">SECTION 05</div>
                     <h2 class="section-title-h2">Technical Skills &amp; Software</h2>
                 </div>
 
                 <div class="skills-grid-4col" id="skills-container">
-                    <!-- Populated by JS -->
+                    <div class="skills-box">
+                        <h3 class="skills-box-title"><i class="fa-solid fa-compass-drafting"></i> <span>Engineering &amp; Analysis</span></h3>
+                        <div class="skills-box-chips">
+                            <span class="pill-chip">CAD Modelling</span>
+                            <span class="pill-chip">CFD Analysis</span>
+                            <span class="pill-chip">FEA Stress Analysis</span>
+                            <span class="pill-chip">Meshing</span>
+                            <span class="pill-chip">Thermodynamics</span>
+                            <span class="pill-chip">Fluid Mechanics</span>
+                            <span class="pill-chip">Control Systems</span>
+                            <span class="pill-chip">Mechanical Design</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-box">
+                        <h3 class="skills-box-title"><i class="fa-solid fa-gears"></i> <span>Manufacturing &amp; Prototyping</span></h3>
+                        <div class="skills-box-chips">
+                            <span class="pill-chip">CNC Machining</span>
+                            <span class="pill-chip">3D Printing (Additive)</span>
+                            <span class="pill-chip">Laser Cutting</span>
+                            <span class="pill-chip">RoboDK</span>
+                            <span class="pill-chip">Prototyping</span>
+                            <span class="pill-chip">Manufacturing Processes</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-box">
+                        <h3 class="skills-box-title"><i class="fa-solid fa-laptop-code"></i> <span>Software &amp; Simulation</span></h3>
+                        <div class="skills-box-chips">
+                            <span class="pill-chip">CATIA V5</span>
+                            <span class="pill-chip">Fusion 360</span>
+                            <span class="pill-chip">ANSYS Fluent</span>
+                            <span class="pill-chip">HeldenMesh</span>
+                            <span class="pill-chip">Tecplot</span>
+                            <span class="pill-chip">Git</span>
+                            <span class="pill-chip">Linux</span>
+                            <span class="pill-chip">Python</span>
+                            <span class="pill-chip">MATLAB</span>
+                            <span class="pill-chip">Simulink</span>
+                            <span class="pill-chip">MS Office</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-box">
+                        <h3 class="skills-box-title"><i class="fa-solid fa-microchip"></i> <span>Aerodynamics &amp; Control</span></h3>
+                        <div class="skills-box-chips">
+                            <span class="pill-chip">SPOD / DMD Analysis</span>
+                            <span class="pill-chip">Wind Tunnel Testing</span>
+                            <span class="pill-chip">URANS Simulations</span>
+                            <span class="pill-chip">ArUco Marker Vision</span>
+                            <span class="pill-chip">PID Tuning</span>
+                            <span class="pill-chip">Betaflight</span>
+                            <span class="pill-chip">Microcontrollers (ESP32/Mega)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -228,7 +553,7 @@
         <!-- 06 — CONTACT Section -->
         <section class="section-bleed" id="contact">
             <div class="page-container">
-                <div class="contact-block reveal">
+                <div class="contact-block">
                     <div>
                         <div class="mono-accent mb-2" style="color: #38bdf8;">SECTION 06 · CONTACT</div>
                         <h2 class="hero-h1 mb-4" style="color: #ffffff; font-size: clamp(28px, 4.5vw, 48px);">
