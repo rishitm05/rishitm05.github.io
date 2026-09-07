@@ -1,6 +1,6 @@
 /* ==========================================================================
    app.js — Interactive behaviour for Rishit Madireddy's Portfolio
-   Swiss Editorial Design & Dynamic Content Hydration
+   Hydration for White & Light Blue Theme
    ========================================================================== */
 
 (function () {
@@ -22,23 +22,6 @@
     $('#about-lead').textContent = profile.aboutLead;
     $('#about-body').textContent = profile.aboutBody;
 
-    // Education
-    $('#edu-degree').textContent = `${education.degree}, ${education.minor}`;
-    $('#edu-institution').textContent = education.institution;
-    $('#edu-period').textContent = education.period;
-    $('#edu-grade').innerHTML = `<i class="fa-solid fa-graduation-cap"></i> ${education.grade}`;
-    $('#edu-scholarship').innerHTML = `<i class="fa-solid fa-award"></i> ${education.scholarship}`;
-
-    // Modules
-    const modulesContainer = $('#modules-list');
-    modulesContainer.innerHTML = '';
-    education.modules.forEach(mod => {
-      const pill = document.createElement('span');
-      pill.className = 'module-pill';
-      pill.textContent = mod;
-      modulesContainer.appendChild(pill);
-    });
-
     // Check if user has uploaded a profile photo
     const profileImgPath = 'images/profile/profile.jpg';
     const imgCheck = new Image();
@@ -51,13 +34,46 @@
       const img = document.createElement('img');
       img.src = profileImgPath;
       img.alt = `${profile.name} - Profile`;
-      container.insertBefore(img, container.firstChild);
+      container.appendChild(img);
     };
   }
 
-  /* ── 2. Populate Experience Section ─────────────────────────── */
+  /* ── 2. Populate Dedicated Education Section ─────────────────── */
+  function populateEducation() {
+    if (!window.DATA || !DATA.education) return;
+    const edu = DATA.education;
+
+    const courseEl = $('#edu-course');
+    if (courseEl) courseEl.textContent = `3rd Year – ${edu.course}, ${edu.minor}`;
+
+    const instEl = $('#edu-institution');
+    if (instEl) instEl.textContent = edu.institution;
+
+    const periodEl = $('#edu-period');
+    if (periodEl) periodEl.textContent = edu.period;
+
+    const gradeEl = $('#edu-grade');
+    if (gradeEl) gradeEl.innerHTML = `<i class="fa-solid fa-graduation-cap"></i> ${edu.grade}`;
+
+    const scholarshipEl = $('#edu-scholarship');
+    if (scholarshipEl) scholarshipEl.innerHTML = `<i class="fa-solid fa-award"></i> ${edu.scholarship}`;
+
+    // Modules
+    const modulesContainer = $('#modules-list');
+    if (modulesContainer) {
+      modulesContainer.innerHTML = '';
+      edu.modules.forEach(mod => {
+        const pill = document.createElement('span');
+        pill.className = 'module-pill';
+        pill.textContent = mod;
+        modulesContainer.appendChild(pill);
+      });
+    }
+  }
+
+  /* ── 3. Populate Professional Experience Section ─────────────── */
   function populateExperience() {
-    if (!window.DATA) return;
+    if (!window.DATA || !DATA.experience) return;
     const container = $('#experience-container');
     container.innerHTML = '';
 
@@ -78,10 +94,10 @@
           <div class="exp-card-header">
             <div>
               <h4 class="item-h3">${exp.title}</h4>
-              <p class="exp-card-company">${exp.company}</p>
+              <p class="exp-card-company">${exp.team}</p>
             </div>
             <div class="exp-card-meta">
-              <span class="mono-label" style="color: var(--accent);">${exp.period}</span>
+              <span class="mono-accent">${exp.period}</span>
               <span class="mono-label" style="font-size: 10.5px;">${exp.location}</span>
             </div>
           </div>
@@ -90,7 +106,7 @@
           </ul>
         </div>
         <div class="exp-skills-row">
-          <span class="mono-label" style="font-size: 10px; margin-right: 4px; color: var(--faint);">KEY TOOLS:</span>
+          <span class="mono-label" style="font-size: 10px; margin-right: 4px; color: var(--primary);">SKILLS / TOOLS:</span>
           ${skillsHTML}
         </div>
       `;
@@ -99,9 +115,9 @@
     });
   }
 
-  /* ── 3. Populate Projects Section (Amit's Card Style) ────────── */
+  /* ── 4. Populate Projects Section (Expanded Selection) ───────── */
   function populateProjects() {
-    if (!window.DATA) return;
+    if (!window.DATA || !DATA.projects) return;
     const container = $('#projects-container');
     container.innerHTML = '';
 
@@ -110,7 +126,7 @@
       card.className = `project-card reveal delay-${(idx % 3) + 1}`;
       card.dataset.id = proj.id;
 
-      // Project Image or Technical Placeholder
+      // Image or technical placeholder
       const imageContainer = `
         <div class="project-card-img-wrap" id="img-wrap-${proj.id}">
           <div class="project-placeholder">
@@ -120,13 +136,13 @@
         </div>
       `;
 
-      // Top Bullets preview
+      // Top 2 bullets for card preview
       const bulletsHTML = proj.bullets
         .slice(0, 2)
         .map(b => `<li>${b}</li>`)
         .join('');
 
-      // Skills Bar
+      // Skills chips
       const skillsHTML = proj.skills
         .slice(0, 4)
         .map(s => `<span class="pill-chip">${s}</span>`)
@@ -137,7 +153,7 @@
         <div class="project-card-body">
           <div>
             <div class="project-card-header">
-              <span class="mono-accent" style="font-size: 10.5px;">${proj.category}</span>
+              <span class="mono-accent" style="font-size: 10px;">${proj.category}</span>
               <h3 class="project-card-title">${proj.title}</h3>
               <span class="project-card-date">${proj.date}</span>
             </div>
@@ -147,17 +163,17 @@
             </ul>
           </div>
           <div style="margin-top: 10px;">
-            <span class="mono-label" style="font-size: 10.5px; color: var(--accent); font-weight: 700;">
-              CLICK FOR FULL TECHNICAL DETAILS &rarr;
+            <span class="mono-label" style="font-size: 11px; color: var(--primary); font-weight: 700;">
+              VIEW TECHNICAL ARCHITECTURE &rarr;
             </span>
           </div>
         </div>
-        <div class="project-card-skills-bar ${proj.barClass}">
+        <div class="project-card-skills-bar">
           ${skillsHTML}
         </div>
       `;
 
-      // Check if image exists on disk/server
+      // Check if image exists
       if (proj.image) {
         const testImg = new Image();
         testImg.src = proj.image;
@@ -169,16 +185,16 @@
         };
       }
 
-      // Click to open modal
+      // Click card to open modal
       card.addEventListener('click', () => openModal(proj));
 
       container.appendChild(card);
     });
   }
 
-  /* ── 4. Populate Skills Section (4-column Grid) ──────────────── */
+  /* ── 5. Populate Skills Section ──────────────────────────────── */
   function populateSkills() {
-    if (!window.DATA) return;
+    if (!window.DATA || !DATA.skillsCategories) return;
     const container = $('#skills-container');
     container.innerHTML = '';
 
@@ -191,7 +207,10 @@
         .join('');
 
       box.innerHTML = `
-        <h3 class="skills-box-title">${cat.category}</h3>
+        <h3 class="skills-box-title">
+          <i class="${cat.icon}"></i>
+          <span>${cat.category}</span>
+        </h3>
         <div class="skills-box-chips">
           ${chipsHTML}
         </div>
@@ -201,7 +220,7 @@
     });
   }
 
-  /* ── 5. Modal System ────────────────────────────────────────── */
+  /* ── 6. Project Modal ───────────────────────────────────────── */
   function openModal(project) {
     const overlay = $('#project-modal-overlay');
 
@@ -217,12 +236,12 @@
 
     const skillsContainer = $('#modal-project-skills');
     skillsContainer.innerHTML = project.skills
-      .map(s => `<span class="pill-chip" style="background: rgba(23, 21, 15, 0.05); font-weight: 600;">${s}</span>`)
+      .map(s => `<span class="pill-chip pill-chip--blue">${s}</span>`)
       .join('');
 
     overlay.hidden = false;
     document.body.style.overflow = 'hidden';
-    void overlay.offsetWidth; // Trigger reflow
+    void overlay.offsetWidth;
     overlay.classList.add('open');
   }
 
@@ -245,7 +264,7 @@
     });
   }
 
-  /* ── 6. Scroll Reveal Observer ──────────────────────────────── */
+  /* ── 7. Scroll Reveal Observer ──────────────────────────────── */
   function initScrollReveal() {
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
@@ -256,19 +275,18 @@
       });
     }, {
       root: null,
-      rootMargin: '0px 0px -40px 0px',
-      threshold: 0.1
+      rootMargin: '0px 0px -30px 0px',
+      threshold: 0.08
     });
 
     $$('.reveal').forEach(el => observer.observe(el));
 
-    // Fallback: force active after 1.5s in case user is already scrolled
     setTimeout(() => {
       $$('.reveal:not(.active)').forEach(el => el.classList.add('active'));
-    }, 1500);
+    }, 1200);
   }
 
-  /* ── 7. Active Nav Highlighting ─────────────────────────────── */
+  /* ── 8. Active Nav Observer ─────────────────────────────────── */
   function initNavObserver() {
     const sections = $$('section[id]');
     const navLinks = $$('.jump-pill');
@@ -295,7 +313,7 @@
     sections.forEach(s => observer.observe(s));
   }
 
-  /* ── 8. Copy Email to Clipboard ─────────────────────────────── */
+  /* ── 9. Copy Email ──────────────────────────────────────────── */
   function initCopyEmail() {
     const btn = $('#copy-email-btn');
     const toast = $('#copy-toast');
@@ -325,6 +343,7 @@
   /* ── Bootstrapping ──────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', () => {
     populateProfile();
+    populateEducation();
     populateExperience();
     populateProjects();
     populateSkills();
@@ -333,7 +352,6 @@
     initNavObserver();
     initCopyEmail();
 
-    // Footer Year
     const yearEl = $('#footer-year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   });

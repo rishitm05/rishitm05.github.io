@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rishit Madireddy — Portfolio</title>
-    <meta name="description" content="Portfolio of Rishit Madireddy — Mechanical &amp; Aerospace Engineering student at UCL specialising in Aerodynamics, Mechanical Design, Autonomous Robotics, and CFD/FEA.">
+    <title>Rishit Madireddy — Mechanical &amp; Aerospace Engineering Portfolio</title>
+    <meta name="description" content="Portfolio of Rishit Madireddy — 3rd Year Mechanical Engineering Student at UCL with Aerospace Industry Experience. UK BPSS Cleared.">
     <meta name="author" content="Rishit Madireddy">
 
     <!-- Open Graph -->
@@ -13,104 +13,99 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rishitm05.github.io">
 
-    <!-- Google Fonts for Archivo, Newsreader & JetBrains Mono (Identical to Amit's stack) -->
+    <!-- Modern Sans & Technical Monospace Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz@1,6..72&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Swiss Editorial Stylesheet -->
+    <!-- Clean White & Light Blue Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Mobile Warning Banner -->
-    <div class="mobile-warning-banner" id="mobile-banner">
-        <div class="page-container" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 0;">
-            <span>This portfolio is engineered with dense technical data and is best viewed on larger desktop displays.</span>
-            <button onclick="document.getElementById('mobile-banner').style.display='none'" style="background: none; border: none; color: inherit; cursor: pointer; font-size: 18px; font-weight: bold; padding: 0 4px;" aria-label="Close banner">×</button>
-        </div>
-    </div>
-
     <!-- Sticky Top Navigation Bar -->
     <header class="top-nav-bar">
         <div class="page-container" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;">
-            <a href="#hero" class="nav-brand mono-label">RISHIT MADIREDDY — PORTFOLIO</a>
+            <a href="#hero" class="nav-brand">
+                <span>RISHIT MADIREDDY</span>
+                <span class="nav-brand-tag">PORTFOLIO</span>
+            </a>
             <nav class="nav-links">
                 <a href="#about" class="jump-pill">01 · About</a>
-                <a href="#experience" class="jump-pill">02 · Experience</a>
-                <a href="#projects" class="jump-pill">03 · Selected Work</a>
-                <a href="#skills" class="jump-pill">04 · Skills</a>
-                <a href="#contact" class="jump-pill">05 · Contact</a>
+                <a href="#education" class="jump-pill">02 · Education</a>
+                <a href="#experience" class="jump-pill">03 · Experience</a>
+                <a href="#projects" class="jump-pill">04 · Projects</a>
+                <a href="#skills" class="jump-pill">05 · Skills</a>
+                <a href="#contact" class="jump-pill">06 · Contact</a>
+                <a href="Rishit_Madireddy_CV.pdf" target="_blank" class="btn-cv-nav">
+                    <i class="fa-solid fa-file-arrow-down"></i> View CV (PDF)
+                </a>
             </nav>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="section-bleed" id="hero" style="padding-top: 64px; padding-bottom: 56px;">
+        <section class="section-bleed" id="hero" style="padding-top: 64px; padding-bottom: 48px; background: linear-gradient(180deg, #ffffff 0%, #f0f7ff 100%); border-bottom: 1px solid var(--line);">
             <div class="page-container reveal" style="text-align: center;">
+                <div class="flex justify-center mb-4">
+                    <span class="badge-bpss">
+                        <i class="fa-solid fa-shield-halved"></i> UK BPSS SECURITY CLEARED
+                    </span>
+                </div>
                 <h1 class="hero-h1 mb-4" id="hero-name">Rishit Madireddy</h1>
-                <div class="hero-subtitle mb-0" id="hero-tagline" style="text-align: center; margin-inline: auto;">
-                    Mechanical, Aerospace &amp; Robotics Systems Engineer.
+                <div class="hero-tagline mb-6" id="hero-tagline" style="margin-inline: auto;">
+                    3rd Year Mechanical Engineering Student at UCL with Aerospace Industry Experience
+                </div>
+                <div class="flex justify-center gap-3 flex-wrap">
+                    <a href="Rishit_Madireddy_CV.pdf" target="_blank" class="btn-primary">
+                        <i class="fa-solid fa-file-pdf"></i> View / Download CV
+                    </a>
+                    <a href="#projects" class="pill-btn">
+                        <i class="fa-solid fa-layer-group"></i> Explore Projects
+                    </a>
+                    <a href="https://github.com/rishitm05" target="_blank" rel="noopener noreferrer" class="pill-btn">
+                        <i class="fa-brands fa-github"></i> GitHub Profile ↗
+                    </a>
                 </div>
             </div>
         </section>
 
         <!-- 01 — ABOUT Section -->
-        <section class="section-bleed section-alt" id="about">
+        <section class="section-bleed" id="about">
             <div class="page-container">
                 <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4 reveal">
                     <div>
                         <div class="mono-accent mb-2">SECTION 01</div>
                         <h2 class="section-title-h2">About Me</h2>
                     </div>
-                    <div class="mono-label" id="about-clearance-label">
-                        UK BPSS CLEARED · UCL 2024–2029
+                    <div class="flex gap-2 items-center">
+                        <span class="badge-bpss"><i class="fa-solid fa-shield-halved"></i> UK BPSS Cleared</span>
+                        <span class="badge-standard"><i class="fa-solid fa-location-dot"></i> London, UK</span>
                     </div>
                 </div>
 
-                <!-- About Teaser Grid -->
                 <div class="about-grid reveal delay-1">
                     <div>
-                        <p class="lead-p mb-6" id="about-lead" style="color: var(--ink); font-weight: 600;">
+                        <p class="lead-p mb-6" id="about-lead">
                             <!-- Populated by JS -->
                         </p>
-                        <p class="body-p mb-6" id="about-body">
+                        <p class="body-p mb-8" id="about-body">
                             <!-- Populated by JS -->
                         </p>
-
-                        <!-- Education Summary Card -->
-                        <div style="background-color: var(--card-bg); border: 1px solid var(--line); border-radius: 12px; padding: 20px; margin-bottom: 24px;">
-                            <div class="flex justify-between items-start flex-wrap gap-2 mb-2">
-                                <div>
-                                    <h4 class="item-h3" style="font-size: 17px;" id="edu-degree"></h4>
-                                    <p class="mono-accent" style="font-size: 11px; margin-top: 2px;" id="edu-institution"></p>
-                                </div>
-                                <span class="mono-label" id="edu-period"></span>
-                            </div>
-                            <div class="edu-badge-row">
-                                <span class="edu-badge" id="edu-grade"><i class="fa-solid fa-graduation-cap"></i> First Class Expected</span>
-                                <span class="edu-badge edu-badge--accent" id="edu-scholarship"><i class="fa-solid fa-award"></i> 2022 Arkwright Scholar</span>
-                                <span class="edu-badge"><i class="fa-solid fa-shield-halved"></i> UK BPSS Cleared</span>
-                            </div>
-                            <div style="margin-top: 14px;">
-                                <span class="mono-label" style="font-size: 10.5px;">Relevant Modules:</span>
-                                <div class="module-pills-container" id="modules-list">
-                                    <!-- Populated by JS -->
-                                </div>
-                            </div>
-                        </div>
 
                         <div class="flex flex-wrap gap-4 items-center">
-                            <a href="#contact" class="btn-solid">Get in Touch <i class="fa-solid fa-arrow-right"></i></a>
-                            <a href="https://drive.google.com/drive/folders/1i_qHLcf9Rqz36Fu3xkGmKzsKSOUM1kZw" target="_blank" rel="noopener noreferrer" class="pill-btn">
-                                <i class="fa-solid fa-folder-open"></i> Projects Drive ↗
+                            <a href="#contact" class="btn-primary">
+                                Get in Touch <i class="fa-solid fa-arrow-right"></i>
                             </a>
-                            <a href="https://github.com/rishitm05" target="_blank" rel="noopener noreferrer" class="pill-btn">
-                                <i class="fa-brands fa-github"></i> GitHub ↗
+                            <a href="Rishit_Madireddy_CV.pdf" target="_blank" class="pill-btn">
+                                <i class="fa-solid fa-arrow-down"></i> Download CV (PDF)
+                            </a>
+                            <a href="https://www.linkedin.com/in/rishit-madireddy/" target="_blank" rel="noopener noreferrer" class="pill-btn">
+                                <i class="fa-brands fa-linkedin"></i> LinkedIn ↗
                             </a>
                         </div>
                     </div>
@@ -118,16 +113,12 @@
                     <!-- Profile Photo / Placeholder -->
                     <div>
                         <div class="profile-photo-container" id="profile-container">
-                            <!-- Image if present, else neat architectural placeholder -->
                             <div class="profile-photo-placeholder" id="profile-placeholder">
-                                <i class="fa-solid fa-user-gear" style="font-size: 40px; color: var(--accent); opacity: 0.85;"></i>
-                                <span class="mono-label" style="font-size: 12px; color: var(--ink); font-weight: 700;">Rishit Madireddy</span>
-                                <span style="font-size: 12px; color: var(--muted); max-width: 220px; line-height: 1.4;">
+                                <i class="fa-solid fa-user-gear"></i>
+                                <span class="mono-label" style="font-size: 13px; color: var(--ink); font-weight: 700;">Rishit Madireddy</span>
+                                <span style="font-size: 12.5px; color: var(--muted); max-width: 220px; line-height: 1.4;">
                                     MEng Mechanical Engineering<br>Minor in Robotics · UCL
                                 </span>
-                            </div>
-                            <div class="caption-banner">
-                                Rishit Madireddy · UCL Mechanical &amp; Aerospace Engineering
                             </div>
                         </div>
                     </div>
@@ -135,52 +126,97 @@
             </div>
         </section>
 
-        <!-- 02 — EXPERIENCE Section -->
-        <section class="section-bleed" id="experience">
+        <!-- 02 — EDUCATION Section (Dedicated Section) -->
+        <section class="section-bleed section-alt" id="education">
             <div class="page-container">
                 <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4 reveal">
                     <div>
                         <div class="mono-accent mb-2">SECTION 02</div>
-                        <h2 class="section-title-h2">Professional Experience</h2>
+                        <h2 class="section-title-h2">Education &amp; Credentials</h2>
                     </div>
-                    <div class="mono-label">
-                        INDUSTRY &amp; TEAM LEADERSHIP
-                    </div>
+                    <div class="mono-label">UNIVERSITY COLLEGE LONDON</div>
                 </div>
 
-                <!-- Experience Cards List -->
+                <div class="education-card reveal delay-1">
+                    <div class="flex justify-between items-start flex-wrap gap-4 mb-4">
+                        <div>
+                            <h3 class="item-h3" style="font-size: 21px;" id="edu-course">
+                                3rd Year – MEng Mechanical Engineering with Year in Industry, Minor in Robotics
+                            </h3>
+                            <p class="body-p font-semibold" style="color: var(--primary); margin-top: 4px;" id="edu-institution">
+                                University College London (UCL)
+                            </p>
+                        </div>
+                        <div class="flex flex-col items-end">
+                            <span class="mono-accent" style="font-size: 13px;" id="edu-period">2024 – 2029 (Expected)</span>
+                            <span class="mono-label" style="color: var(--faint);">Undergraduate Master of Engineering</span>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-3 items-center mb-6">
+                        <span class="pill-chip pill-chip--blue" id="edu-grade">
+                            <i class="fa-solid fa-graduation-cap"></i> First Class with Honours (On Track)
+                        </span>
+                        <span class="badge-bpss">
+                            <i class="fa-solid fa-shield-halved"></i> UK BPSS Security Cleared
+                        </span>
+                        <span class="pill-chip" id="edu-scholarship">
+                            <i class="fa-solid fa-award"></i> 2022 Arkwright Engineering Scholar
+                        </span>
+                    </div>
+
+                    <div class="border-t pt-4">
+                        <span class="mono-label" style="color: var(--ink); font-weight: 700; display: block; margin-bottom: 8px;">
+                            Relevant Coursework &amp; Modules:
+                        </span>
+                        <div class="module-pills-container" id="modules-list">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 — PROFESSIONAL EXPERIENCE Section -->
+        <section class="section-bleed" id="experience">
+            <div class="page-container">
+                <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4 reveal">
+                    <div>
+                        <div class="mono-accent mb-2">SECTION 03</div>
+                        <h2 class="section-title-h2">Professional Experience</h2>
+                    </div>
+                    <div class="mono-label">INDUSTRY &amp; TEAM LEADERSHIP</div>
+                </div>
+
                 <div class="exp-grid" id="experience-container">
                     <!-- Populated by JS -->
                 </div>
             </div>
         </section>
 
-        <!-- 03 — SELECTED WORK & PROJECTS Section -->
+        <!-- 04 — PROJECTS Section -->
         <section class="section-bleed section-alt" id="projects">
             <div class="page-container">
                 <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4 reveal">
                     <div>
-                        <div class="mono-accent mb-2">SECTION 03</div>
-                        <h2 class="section-title-h2">Selected Work &amp; Projects</h2>
+                        <div class="mono-accent mb-2">SECTION 04</div>
+                        <h2 class="section-title-h2">Projects</h2>
                     </div>
-                    <div class="mono-label">
-                        2025 — PRESENT
-                    </div>
+                    <div class="mono-label">MECHANICAL · AERODYNAMICS · ROBOTICS · CFD</div>
                 </div>
 
-                <!-- Project Cards Grid (Matches Amit's card design) -->
                 <div class="project-card-grid" id="projects-container">
                     <!-- Populated by JS -->
                 </div>
             </div>
         </section>
 
-        <!-- 04 — SKILLS & TOOLS Section -->
+        <!-- 05 — TECHNICAL SKILLS Section -->
         <section class="section-bleed" id="skills">
             <div class="page-container">
                 <div class="mb-10 border-b pb-6 reveal">
-                    <div class="mono-accent mb-2">SECTION 04</div>
-                    <h2 class="section-title-h2">Technical Skills &amp; Tools</h2>
+                    <div class="mono-accent mb-2">SECTION 05</div>
+                    <h2 class="section-title-h2">Technical Skills &amp; Software</h2>
                 </div>
 
                 <div class="skills-grid-4col" id="skills-container">
@@ -189,21 +225,26 @@
             </div>
         </section>
 
-        <!-- 05 — CONTACT Section (Matches Amit's dark stone block) -->
+        <!-- 06 — CONTACT Section -->
         <section class="section-bleed" id="contact">
             <div class="page-container">
                 <div class="contact-block reveal">
                     <div>
-                        <div class="mono-accent mb-4" style="color: #FF6B4A;">SECTION 05 · CONTACT</div>
-                        <h2 class="hero-h1 mb-6" style="color: var(--paper); font-size: clamp(32px, 5.5vw, 64px);">
-                            Let's connect.
+                        <div class="mono-accent mb-2" style="color: #38bdf8;">SECTION 06 · CONTACT</div>
+                        <h2 class="hero-h1 mb-4" style="color: #ffffff; font-size: clamp(28px, 4.5vw, 48px);">
+                            Get in touch.
                         </h2>
-                        <p class="lead-p mb-4" style="color: rgba(221, 213, 195, 0.85); max-width: 680px;">
-                            I am actively seeking engineering placements, internships, and research collaborations across mechanical design, aerodynamics, autonomous robotics, and aerospace propulsion.
+                        <p class="lead-p mb-4" style="color: #cbd5e1; max-width: 680px;">
+                            Currently seeking summer placements and engineering internships across mechanical engineering, aerospace aerodynamics, and robotics control systems.
                         </p>
-                        <p class="body-p" style="color: rgba(221, 213, 195, 0.65); font-family: var(--font-mono); font-size: 12px;">
-                            LOCATION: London, UK &nbsp;·&nbsp; STATUS: UK BPSS Cleared
-                        </p>
+                        <div class="flex gap-2 items-center flex-wrap">
+                            <span class="badge-bpss" style="background: rgba(14, 165, 233, 0.2); color: #38bdf8; border-color: #0284c7;">
+                                <i class="fa-solid fa-shield-halved"></i> UK BPSS Cleared
+                            </span>
+                            <span style="font-family: var(--font-mono); font-size: 12px; color: #94a3b8;">
+                                Location: London, UK
+                            </span>
+                        </div>
                     </div>
 
                     <div class="contact-links-row">
@@ -219,10 +260,10 @@
                             <i class="fa-brands fa-linkedin"></i> LinkedIn ↗
                         </a>
                         <a href="https://github.com/rishitm05" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <i class="fa-brands fa-github"></i> GitHub ↗
+                            <i class="fa-brands fa-github"></i> GitHub Profile ↗
                         </a>
-                        <a href="https://drive.google.com/drive/folders/1i_qHLcf9Rqz36Fu3xkGmKzsKSOUM1kZw" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <i class="fa-solid fa-folder-open"></i> Projects Drive ↗
+                        <a href="Rishit_Madireddy_CV.pdf" target="_blank" class="contact-link">
+                            <i class="fa-solid fa-file-pdf"></i> Download CV (PDF) ↗
                         </a>
                     </div>
                 </div>
@@ -235,7 +276,7 @@
         <div class="page-container">
             <div class="mono-label" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
                 <span>&copy; <span id="footer-year">2026</span> RISHIT MADIREDDY</span>
-                <span>MECHANICAL &amp; AEROSPACE ENGINEERING · UCL</span>
+                <span>UCL MECHANICAL &amp; AEROSPACE ENGINEERING</span>
             </div>
         </div>
     </footer>
@@ -245,27 +286,27 @@
         <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-project-title">
             <button class="modal-close" id="modal-close-btn" aria-label="Close dialog">&times;</button>
             <div class="mono-accent mb-2" id="modal-project-category"></div>
-            <h3 class="section-title-h2 mb-2" id="modal-project-title" style="font-size: 24px;"></h3>
-            <span class="mono-label mb-6" style="display: block; color: var(--accent);" id="modal-project-date"></span>
+            <h3 class="section-title-h2 mb-2" id="modal-project-title" style="font-size: 22px;"></h3>
+            <span class="mono-label mb-6" style="display: block; color: var(--primary);" id="modal-project-date"></span>
 
             <p class="body-p mb-6" id="modal-project-desc" style="color: var(--ink); font-weight: 500;"></p>
 
             <div class="mb-6">
-                <div class="mono-label mb-3" style="color: var(--ink);">Engineering Technical Highlights</div>
+                <div class="mono-label mb-3" style="color: var(--ink); font-weight: 700;">Technical Engineering Highlights</div>
                 <ul class="exp-bullets" id="modal-project-bullets" style="margin-top: 0;"></ul>
             </div>
 
             <div class="mb-6">
-                <div class="mono-label mb-3" style="color: var(--ink);">Technologies &amp; Tools Used</div>
+                <div class="mono-label mb-3" style="color: var(--ink); font-weight: 700;">Tools &amp; Methodologies</div>
                 <div class="flex flex-wrap gap-2" id="modal-project-skills"></div>
             </div>
 
             <div class="flex gap-4 pt-6 border-t flex-wrap">
-                <a href="https://drive.google.com/drive/folders/1i_qHLcf9Rqz36Fu3xkGmKzsKSOUM1kZw" target="_blank" rel="noopener noreferrer" class="btn-solid">
-                    <i class="fa-solid fa-folder-open"></i> View CAD &amp; CFD Files in Drive ↗
-                </a>
-                <a href="https://github.com/rishitm05" target="_blank" rel="noopener noreferrer" class="pill-btn">
+                <a href="https://github.com/rishitm05" target="_blank" rel="noopener noreferrer" class="btn-primary">
                     <i class="fa-brands fa-github"></i> GitHub Repository ↗
+                </a>
+                <a href="Rishit_Madireddy_CV.pdf" target="_blank" class="pill-btn">
+                    <i class="fa-solid fa-file-pdf"></i> View Official CV ↗
                 </a>
             </div>
         </div>
