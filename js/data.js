@@ -1,6 +1,5 @@
 /* ============================================================
    data.js — Centralised portfolio data for Rishit Madireddy
-   Updated Experience structure & Exact CV Content
    ============================================================ */
 
 const DATA = {
@@ -8,7 +7,6 @@ const DATA = {
   /* ── Profile ─────────────────────────────────────────────── */
   profile: {
     name: "Rishit Madireddy",
-    tagline: "3rd Year Mechanical Engineering Student at UCL with Aerospace Industry Experience",
     aboutLead: "Third-year Mechanical Engineering student at UCL and 2022 Arkwright Engineering Scholar with experience at Boeing as an Aerodynamics Engineering Intern and a virtual internship at GE Aerospace.",
     aboutBody: "Skilled in CAD, CFD, MATLAB/Simulink and Python, demonstrated in industry and projects such as a PID-tuned quadcopter, EV charging device and wind turbine. Currently serving as Lead Drone Engineer at UCL Rover Team for aerodynamics and autonomous subsystems with further expertise in mechanical design, testing and systems engineering.",
     email: "rmadireddy05@gmail.com",
@@ -20,15 +18,13 @@ const DATA = {
     linkedin: "https://www.linkedin.com/in/rishit-madireddy/"
   },
 
-  /* ── Education (Dedicated Section) ───────────────────────── */
+  /* ── Education ───────────────────────────────────────────── */
   education: {
-    course: "MEng Mechanical Engineering with Year in Industry",
-    minor: "Minor in Robotics",
+    course: "3rd Year – MEng Mechanical Engineering with Year in Industry, Minor in Robotics",
     institution: "University College London (UCL)",
     period: "2024 – 2029 (Expected)",
     grade: "First Class with Honours (On Track)",
     scholarship: "2022 Arkwright Engineering Scholar",
-    clearance: "UK BPSS Cleared",
     modules: [
       "Dynamics and Control",
       "Mathematical Modelling and Analysis",
@@ -42,13 +38,12 @@ const DATA = {
     ]
   },
 
-  /* ── Professional Experience (CV Structure & Exact Content) ── */
+  /* ── Professional Experience ─────────────────────────────── */
   experience: [
     {
       id: "boeing",
       title: "Aerodynamics Engineering Intern",
       organization: "Boeing Commercial Airplanes",
-      division: "HiLACC, Cody Technology Park",
       location: "Farnborough, UK",
       period: "June 2026 – September 2026",
       bullets: [
@@ -58,13 +53,12 @@ const DATA = {
         "Participated in technical design reviews with Chief Engineers and presented findings on transonic buffet and SBLI seen in Tecplot.",
         "Supported wind tunnel testing of Check Standard Model, validating results up to M0.32 at 3 bar for increased Reynolds number."
       ],
-      skills: ["CATIA V5", "HeldenMesh", "Tecplot", "Python", "SPOD / DMD", "Wind Tunnel Testing", "URANS CFD"]
+      skills: ["CATIA V5", "HeldenMesh", "CFD", "Tecplot", "Git", "Linux", "Python", "SPOD / DMD", "Wind Tunnel Testing"]
     },
     {
       id: "ucl-rover",
       title: "Lead Drone Engineer and Team Manager",
       organization: "UCL Rover Team",
-      division: null,
       location: "London, UK",
       period: "February 2025 – Present",
       bullets: [
@@ -72,13 +66,12 @@ const DATA = {
         "Modelling control systems in Simulink, integrating ArUco marker detection to achieve landings on 1 x 1 m pad with Raspberry Pi.",
         "Increased accuracy of robotic arm by 25% by programming calibration sequence on microcontrollers (ESP32 and Arduino Mega)."
       ],
-      skills: ["Fusion 360", "ANSYS CFD", "Simulink", "Raspberry Pi", "ArUco Vision", "ESP32", "Arduino Mega"]
+      skills: ["Fusion 360", "ANSYS", "CFD", "MATLAB", "Simulink", "Raspberry Pi", "ArUco Vision", "ESP32", "Arduino Mega"]
     },
     {
       id: "ge-aerospace",
       title: "Virtual Internship – Explore Engineering Programme",
       organization: "GE Aerospace, Inc.",
-      division: null,
       location: "Virtual",
       period: "July 2025 – September 2025",
       bullets: [
@@ -86,15 +79,16 @@ const DATA = {
         "Calculated and plotted fan tip velocities up to M1.5 for engines with compression ratios of 50:1 using MATLAB.",
         "Prepared presentation on limitations of bypass / compression ratios in turbofan engines (e.g. fan diameter, noise, material stress)."
       ],
-      skills: ["MATLAB", "Propulsion Thermodynamics", "Aviation Energy Systems", "Structural Boundaries"]
+      skills: ["MATLAB", "Energy Systems", "Thermodynamics", "Propulsion Cycles", "Compressible Flow"]
     }
   ],
 
-  /* ── Projects ────────────────────────────────────────────── */
+  /* ── Projects (Ordered Exactly to User Spec) ─────────────── */
   projects: [
     {
       id: "quadcopter",
       title: "PID-Tuned Quadcopter",
+      subtitle: null,
       date: "June 2025 – Present",
       category: "Robotics & Controls",
       shortDesc: "High-performance custom 5-inch aerobatic quadcopter with CNC-machined CFRP airframe, dynamic Simulink modelling, and toroidal propeller CFD.",
@@ -104,12 +98,13 @@ const DATA = {
         "Minimised form drag by performing CFD on varying pitch angles of 3/4-blade toroidal propellers in Fusion 360 and Ansys Fluent."
       ],
       skills: ["Simulink", "Betaflight", "Ansys Fluent", "Fusion 360", "CNC CFRP", "PID Tuning"],
-      iconClass: "fa-solid fa-plane-up",
+      iconClass: "fa-solid fa-drone",
       image: "images/projects/quadcopter.png"
     },
     {
       id: "imeche-ev",
       title: "Automated EV Charging Device",
+      subtitle: "IMechE Design Challenge",
       date: "January 2025 – March 2025",
       category: "Mechanical & CAD",
       shortDesc: "Autonomous wall-detecting docking vehicle engineered with FEA-tested chassis and Python spring compression mechanics for the IMechE Design Challenge.",
@@ -119,13 +114,14 @@ const DATA = {
         "Developed numerical model in Python to measure spring compressions under load, giving an ideal spring constant of 560 N/m.",
         "Underwent design review, clarifying material choices for frame and design process behind spring-lead-screw mechanism."
       ],
-      skills: ["Fusion 360", "FEA Analysis", "Python 3", "Analogue Circuitry", "Mechanism Design"],
+      skills: ["Fusion 360", "FEA", "Python 3", "Analogue Circuitry", "Mechanism Design", "Prototyping"],
       iconClass: "fa-solid fa-charging-station",
       image: "images/projects/imeche-ev.png"
     },
     {
       id: "wind-turbine",
       title: "Portable High-Efficiency Wind Turbine",
+      subtitle: "UCL Autodesk Mechathon",
       date: "January 2025",
       category: "Aerodynamics & CFD",
       shortDesc: "UCL Autodesk Mechathon (4th Place overall) — custom aerodynamic blade profiling, RPM and power output CFD simulations, and automated G-code manufacturing.",
@@ -134,76 +130,60 @@ const DATA = {
         "Modelled blade profiles in Fusion 360 and used Ansys Fluent to simulate maximum RPM and estimate power output.",
         "3D-printed turbine blades and modified G-code to automate the process and laser-cut an acrylic-plywood base."
       ],
-      skills: ["Fusion 360", "Ansys Fluent", "3D Printing", "G-Code", "Laser Cutting"],
+      skills: ["Fusion 360", "Ansys Fluent", "3D Printing", "G-Code", "Laser Cutting", "Aerodynamics"],
       iconClass: "fa-solid fa-wind",
       image: "images/projects/wind-turbine.png"
     },
     {
-      id: "mars-drone-system",
-      title: "Mars Autonomous Exploration Drone",
-      date: "February 2025 – Present",
-      category: "Robotics & Autonomous Systems",
-      shortDesc: "UCL Rover Team — Planetary aerial scout with low-density rotor CFD, ArUco vision precision landing, and dual microcontroller flight architecture.",
+      id: "cricket-scoreboard",
+      title: "Electronic Cricket Scoreboard",
+      subtitle: null,
+      date: "2024",
+      category: "Electronics & PCB Design",
+      shortDesc: "Designed and built an electronic cricket scoreboard to track runs and wickets for cricket matches with custom cascading counter circuitry and PCB layout.",
       bullets: [
-        "Engineered structural airframe in Fusion 360 and conducted aerodynamic CFD in ANSYS on 3-blade props in simulated Martian low-density atmosphere.",
-        "Integrated ArUco computer vision marker recognition with Raspberry Pi camera to achieve autonomous precision landings on 1 x 1 m rover pad.",
-        "Programmed microcontroller calibration sequences (ESP32 and Arduino Mega), increasing robotic arm positioning precision by 25%."
+        "Designed and built an electronic cricket scoreboard to track runs and wickets for cricket matches.",
+        "Used astable and monostable circuits to increment values on 7-segment displays with cascading 4026 decade counters.",
+        "Tested circuit on breadboards and effectively documented the entire design and validation process.",
+        "Converted CircuitWizard schematic to Fusion 360 and designed a functioning PCB for reliable scoring."
       ],
-      skills: ["ANSYS CFD", "Raspberry Pi", "OpenCV / ArUco", "ESP32", "Arduino Mega", "Simulink"],
-      iconClass: "fa-solid fa-satellite",
-      image: "images/projects/mars-drone.png"
+      skills: ["Fusion 360", "PCB Design", "CircuitWizard", "4026 ICs", "Analogue Circuitry", "Prototyping"],
+      iconClass: "fa-solid fa-microchip",
+      image: "images/projects/cricket-scoreboard.png"
     },
     {
-      id: "turbofan-propulsion",
-      title: "Turbofan Propulsion & Alternative Aviation Fuels",
-      date: "July 2025 – September 2025",
-      category: "Thermodynamics & Energy",
-      shortDesc: "Comprehensive propulsion cycle comparative analysis evaluating SAF, LH2, and supersonic fan tip aerodynamics for 50:1 ultra-high bypass engines.",
+      id: "lap-counter",
+      title: "Lap Counter for Scalextric Racetrack",
+      subtitle: null,
+      date: "2024",
+      category: "Embedded Systems & Assembly",
+      shortDesc: "Programmed a PIC16F84A microcontroller in Assembly (ASM) to deliver accurate motion-sensing lap counting, countdown sequencing, and completion indicators.",
       bullets: [
-        "Conducted propulsion comparative analysis for next-gen aviation fuels (SAF, Liquid Hydrogen, LNG) calculating cost, gravimetric energy density, and emissions per MJ.",
-        "Modelled and plotted supersonic fan tip velocities up to Mach 1.5 for ultra-high bypass engines (50:1 pressure ratio) in MATLAB.",
-        "Evaluated aerodynamic, acoustic, and structural boundaries of turbofans including fan diameter limits, flutter, and blade stress."
+        "Programmed a PIC16F84A microcontroller in Assembly (ASM) to count laps for an RC car Scalextric track.",
+        "Implemented a countdown sequence with LEDs and monitored input signals to track lap progress in real-time.",
+        "Designed the system to increment lap count and update memory upon detecting motion from optical/switch sensors.",
+        "Configured lap display on a 7-segment display and incorporated a flashing LED sequence to indicate race completion.",
+        "Created a reliable race timing system with internal logic to handle signal delays and prevent false triggers."
       ],
-      skills: ["MATLAB", "Thermodynamics", "Propulsion Cycles", "Alternative Fuels", "Compressible Flow"],
-      iconClass: "fa-solid fa-gauge-high",
-      image: "images/projects/turbofan.png"
+      skills: ["Assembly (ASM)", "PIC16F84A", "Microcontrollers", "Embedded Systems", "Sensor Integration", "Logic Design"],
+      iconClass: "fa-solid fa-stopwatch",
+      image: "images/projects/lap-counter.png"
     }
   ],
 
-  /* ── Technical Skills & Tools ────────────────────────────── */
+  /* ── Technical Skills (Grouped exactly as in CV) ─────────── */
   skillsCategories: [
     {
       category: "Engineering & Analysis",
-      icon: "fa-solid fa-compass-drafting",
-      skills: [
-        "CAD Modelling", "CFD Analysis", "FEA Stress Analysis",
-        "Meshing", "Thermodynamics", "Fluid Mechanics",
-        "Control Systems", "Mechanical Design"
-      ]
+      skills: ["CAD", "CFD", "FEA", "Meshing", "Thermodynamics", "Fluid Mechanics", "Control Systems", "Mechanical Design"]
     },
     {
       category: "Manufacturing & Prototyping",
-      icon: "fa-solid fa-gears",
-      skills: [
-        "CNC Machining", "3D Printing (Additive)", "Laser Cutting",
-        "RoboDK", "Prototyping", "Manufacturing Processes"
-      ]
+      skills: ["CNC Machining", "3D Printing", "Laser Cutting", "RoboDK", "Prototyping", "Manufacturing Processes"]
     },
     {
-      category: "Software & Simulation",
-      icon: "fa-solid fa-laptop-code",
-      skills: [
-        "CATIA V5", "Fusion 360", "ANSYS Fluent", "HeldenMesh",
-        "Tecplot", "Git", "Linux", "Python", "MATLAB", "Simulink", "MS Office"
-      ]
-    },
-    {
-      category: "Aerodynamics & Control",
-      icon: "fa-solid fa-microchip",
-      skills: [
-        "SPOD / DMD Analysis", "Wind Tunnel Testing", "URANS Simulations",
-        "ArUco Marker Vision", "PID Tuning", "Betaflight", "Microcontrollers (ESP32/Mega)"
-      ]
+      category: "Software & Tools",
+      skills: ["CATIA V5", "Fusion 360", "ANSYS", "HeldenMesh", "Tecplot", "Git", "Linux", "Python", "MATLAB", "Simulink", "MS Office"]
     }
   ]
 };

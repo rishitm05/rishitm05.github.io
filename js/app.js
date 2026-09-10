@@ -53,6 +53,15 @@
 
     $('#modal-project-category').textContent = project.category;
     $('#modal-project-title').textContent = project.title;
+    
+    const subtitleEl = $('#modal-project-subtitle');
+    if (project.subtitle) {
+      subtitleEl.textContent = project.subtitle;
+      subtitleEl.style.display = 'block';
+    } else {
+      subtitleEl.style.display = 'none';
+    }
+
     $('#modal-project-date').textContent = project.date;
     $('#modal-project-desc').textContent = project.shortDesc;
 
