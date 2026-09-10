@@ -9,24 +9,8 @@
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
-  /* ── 1. Check & Hydrate Images ───────────────────────────────── */
-  function checkImages() {
-    // Check if user has uploaded a profile photo
-    const profileImgPath = 'images/profile/profile.jpg';
-    const profileCheck = new Image();
-    profileCheck.src = profileImgPath;
-    profileCheck.onload = function() {
-      const container = $('#profile-container');
-      const placeholder = $('#profile-placeholder');
-      if (placeholder) placeholder.remove();
-
-      const img = document.createElement('img');
-      img.src = profileImgPath;
-      img.alt = 'Rishit Madireddy - Profile';
-      container.appendChild(img);
-    };
-
-    // Check project images
+  /* ── 1. Check Project Images ──────────────────────────────────── */
+  function checkProjectImages() {
     if (window.DATA && DATA.projects) {
       DATA.projects.forEach(proj => {
         if (proj.image) {
@@ -62,7 +46,6 @@
       subtitleEl.style.display = 'none';
     }
 
-    $('#modal-project-date').textContent = project.date;
     $('#modal-project-desc').textContent = project.shortDesc;
 
     const bulletsList = $('#modal-project-bullets');
@@ -74,6 +57,11 @@
     skillsContainer.innerHTML = project.skills
       .map(s => `<span class="pill-chip pill-chip--blue">${s}</span>`)
       .join('');
+
+    const ghLink = $('#modal-project-github-link');
+    if (ghLink) {
+      ghLink.href = project.githubUrl || 'https://github.com/rishitm05';
+    }
 
     overlay.hidden = false;
     document.body.style.overflow = 'hidden';
@@ -162,7 +150,7 @@
 
   /* ── Bootstrapping ──────────────────────────────────────────── */
   document.addEventListener('DOMContentLoaded', () => {
-    checkImages();
+    checkProjectImages();
     initModal();
     initNavObserver();
     initCopyEmail();

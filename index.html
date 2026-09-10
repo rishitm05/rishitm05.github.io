@@ -13,6 +13,9 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rishitm05.github.io">
 
+    <!-- Clean SVG Data URI Favicon to remove default browser airplane/globe icon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230284c7'/%3E%3Ctext x='16' y='21' fill='%23ffffff' font-family='sans-serif' font-size='14' font-weight='800' text-anchor='middle'%3ERM%3C/text%3E%3C/svg%3E">
+
     <!-- Modern Sans & Technical Monospace Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,10 +106,11 @@
                         </div>
                     </div>
 
-                    <!-- Profile Photo / Placeholder -->
+                    <!-- Profile Photo Container -->
                     <div>
                         <div class="profile-photo-container" id="profile-container">
-                            <div class="profile-photo-placeholder" id="profile-placeholder">
+                            <img src="images/profile/profile.jpg" alt="Rishit Madireddy - Profile Photo" onerror="this.style.display='none'; document.getElementById('profile-placeholder').style.display='flex';">
+                            <div class="profile-photo-placeholder" id="profile-placeholder" style="display: none;">
                                 <i class="fa-solid fa-user-gear"></i>
                                 <span class="mono-label" style="font-size: 13px; color: var(--ink); font-weight: 700;">Rishit Madireddy</span>
                                 <span style="font-size: 12.5px; color: var(--muted); max-width: 220px; line-height: 1.4;">
@@ -276,7 +280,7 @@
             </div>
         </section>
 
-        <!-- PROJECTS Section -->
+        <!-- PROJECTS Section (No Dates, Ordered to User Spec, Direct GitHub Links) -->
         <section class="section-bleed section-alt" id="projects">
             <div class="page-container">
                 <div class="mb-10 border-b pb-6">
@@ -285,8 +289,8 @@
 
                 <div class="project-card-grid" id="projects-container">
                     <!-- Project 1: Quadcopter -->
-                    <article class="project-card" onclick="openModalById('quadcopter')">
-                        <div class="project-card-img-wrap" id="img-wrap-quadcopter">
+                    <article class="project-card">
+                        <div class="project-card-img-wrap" id="img-wrap-quadcopter" onclick="openModalById('quadcopter')">
                             <div class="project-placeholder">
                                 <i class="fa-solid fa-drone"></i>
                                 <span>ROBOTICS &amp; CONTROLS</span>
@@ -296,8 +300,7 @@
                             <div>
                                 <div class="project-card-header">
                                     <span class="mono-accent" style="font-size: 10px;">Robotics &amp; Controls</span>
-                                    <h3 class="project-card-title">PID-Tuned Quadcopter</h3>
-                                    <span class="project-card-date">June 2025 – Present</span>
+                                    <h3 class="project-card-title" onclick="openModalById('quadcopter')">PID-Tuned Quadcopter</h3>
                                 </div>
                                 <p class="project-card-desc">High-performance custom 5-inch aerobatic quadcopter with CNC-machined CFRP airframe, dynamic Simulink modelling, and toroidal propeller CFD.</p>
                                 <ul class="project-card-bullets">
@@ -305,10 +308,13 @@
                                     <li>Reduced oscillations by 40% by modelling PID control loops in Simulink and tuned in Betaflight to achieve stable flight dynamics.</li>
                                 </ul>
                             </div>
-                            <div style="margin-top: 10px;">
-                                <span class="mono-label" style="font-size: 11px; color: var(--primary); font-weight: 700;">
+                            <div class="flex justify-between items-center" style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line);">
+                                <button type="button" onclick="openModalById('quadcopter')" style="border: none; background: none; font-family: var(--font-mono); font-size: 11px; color: var(--primary); font-weight: 700; cursor: pointer; padding: 0;">
                                     View details &rarr;
-                                </span>
+                                </button>
+                                <a href="https://github.com/rishitm05/PID-Tuned-Quadcopter" target="_blank" rel="noopener noreferrer" class="pill-chip pill-chip--blue" style="font-size: 10.5px; text-decoration: none;">
+                                    <i class="fa-brands fa-github"></i> GitHub ↗
+                                </a>
                             </div>
                         </div>
                         <div class="project-card-skills-bar">
@@ -320,8 +326,8 @@
                     </article>
 
                     <!-- Project 2: EV Charging -->
-                    <article class="project-card" onclick="openModalById('imeche-ev')">
-                        <div class="project-card-img-wrap" id="img-wrap-imeche-ev">
+                    <article class="project-card">
+                        <div class="project-card-img-wrap" id="img-wrap-imeche-ev" onclick="openModalById('imeche-ev')">
                             <div class="project-placeholder">
                                 <i class="fa-solid fa-charging-station"></i>
                                 <span>MECHANICAL &amp; CAD</span>
@@ -331,9 +337,8 @@
                             <div>
                                 <div class="project-card-header">
                                     <span class="mono-accent" style="font-size: 10px;">Mechanical &amp; CAD</span>
-                                    <h3 class="project-card-title">Automated EV Charging Device</h3>
+                                    <h3 class="project-card-title" onclick="openModalById('imeche-ev')">Automated EV Charging Device</h3>
                                     <span class="project-card-subtitle">IMechE Design Challenge</span>
-                                    <span class="project-card-date">January 2025 – March 2025</span>
                                 </div>
                                 <p class="project-card-desc">Autonomous wall-detecting docking vehicle engineered with FEA-tested chassis and Python spring compression mechanics for the IMechE Design Challenge.</p>
                                 <ul class="project-card-bullets">
@@ -341,10 +346,13 @@
                                     <li>Modelled chassis and powertrain using Fusion 360, producing engineering drawings and evaluated using FEA (Safety Factor > 6).</li>
                                 </ul>
                             </div>
-                            <div style="margin-top: 10px;">
-                                <span class="mono-label" style="font-size: 11px; color: var(--primary); font-weight: 700;">
+                            <div class="flex justify-between items-center" style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line);">
+                                <button type="button" onclick="openModalById('imeche-ev')" style="border: none; background: none; font-family: var(--font-mono); font-size: 11px; color: var(--primary); font-weight: 700; cursor: pointer; padding: 0;">
                                     View details &rarr;
-                                </span>
+                                </button>
+                                <a href="https://github.com/rishitm05/IMechE-Design-Challenge-Automated-EV-Charging-Device" target="_blank" rel="noopener noreferrer" class="pill-chip pill-chip--blue" style="font-size: 10.5px; text-decoration: none;">
+                                    <i class="fa-brands fa-github"></i> GitHub ↗
+                                </a>
                             </div>
                         </div>
                         <div class="project-card-skills-bar">
@@ -356,8 +364,8 @@
                     </article>
 
                     <!-- Project 3: Wind Turbine -->
-                    <article class="project-card" onclick="openModalById('wind-turbine')">
-                        <div class="project-card-img-wrap" id="img-wrap-wind-turbine">
+                    <article class="project-card">
+                        <div class="project-card-img-wrap" id="img-wrap-wind-turbine" onclick="openModalById('wind-turbine')">
                             <div class="project-placeholder">
                                 <i class="fa-solid fa-wind"></i>
                                 <span>AERODYNAMICS &amp; CFD</span>
@@ -367,9 +375,8 @@
                             <div>
                                 <div class="project-card-header">
                                     <span class="mono-accent" style="font-size: 10px;">Aerodynamics &amp; CFD</span>
-                                    <h3 class="project-card-title">Portable High-Efficiency Wind Turbine</h3>
+                                    <h3 class="project-card-title" onclick="openModalById('wind-turbine')">Portable High-Efficiency Wind Turbine</h3>
                                     <span class="project-card-subtitle">UCL Autodesk Mechathon</span>
-                                    <span class="project-card-date">January 2025</span>
                                 </div>
                                 <p class="project-card-desc">UCL Autodesk Mechathon (4th Place overall) — custom aerodynamic blade profiling, RPM and power output CFD simulations, and automated G-code manufacturing.</p>
                                 <ul class="project-card-bullets">
@@ -377,10 +384,13 @@
                                     <li>Modelled blade profiles in Fusion 360 and used Ansys Fluent to simulate maximum RPM and estimate power output.</li>
                                 </ul>
                             </div>
-                            <div style="margin-top: 10px;">
-                                <span class="mono-label" style="font-size: 11px; color: var(--primary); font-weight: 700;">
+                            <div class="flex justify-between items-center" style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line);">
+                                <button type="button" onclick="openModalById('wind-turbine')" style="border: none; background: none; font-family: var(--font-mono); font-size: 11px; color: var(--primary); font-weight: 700; cursor: pointer; padding: 0;">
                                     View details &rarr;
-                                </span>
+                                </button>
+                                <a href="https://github.com/rishitm05/UCL-Autodesk-Mechathon-Portable-Wind-Turbine" target="_blank" rel="noopener noreferrer" class="pill-chip pill-chip--blue" style="font-size: 10.5px; text-decoration: none;">
+                                    <i class="fa-brands fa-github"></i> GitHub ↗
+                                </a>
                             </div>
                         </div>
                         <div class="project-card-skills-bar">
@@ -392,8 +402,8 @@
                     </article>
 
                     <!-- Project 4: Electronic Cricket Scoreboard -->
-                    <article class="project-card" onclick="openModalById('cricket-scoreboard')">
-                        <div class="project-card-img-wrap" id="img-wrap-cricket-scoreboard">
+                    <article class="project-card">
+                        <div class="project-card-img-wrap" id="img-wrap-cricket-scoreboard" onclick="openModalById('cricket-scoreboard')">
                             <div class="project-placeholder">
                                 <i class="fa-solid fa-microchip"></i>
                                 <span>ELECTRONICS &amp; PCB DESIGN</span>
@@ -403,8 +413,7 @@
                             <div>
                                 <div class="project-card-header">
                                     <span class="mono-accent" style="font-size: 10px;">Electronics &amp; PCB Design</span>
-                                    <h3 class="project-card-title">Electronic Cricket Scoreboard</h3>
-                                    <span class="project-card-date">2024</span>
+                                    <h3 class="project-card-title" onclick="openModalById('cricket-scoreboard')">Electronic Cricket Scoreboard</h3>
                                 </div>
                                 <p class="project-card-desc">Designed and built an electronic cricket scoreboard to track runs and wickets with cascading 4026 decade counters and custom PCB layout.</p>
                                 <ul class="project-card-bullets">
@@ -412,10 +421,13 @@
                                     <li>Used astable and monostable circuits to increment values on 7-segment displays with cascading 4026s.</li>
                                 </ul>
                             </div>
-                            <div style="margin-top: 10px;">
-                                <span class="mono-label" style="font-size: 11px; color: var(--primary); font-weight: 700;">
+                            <div class="flex justify-between items-center" style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line);">
+                                <button type="button" onclick="openModalById('cricket-scoreboard')" style="border: none; background: none; font-family: var(--font-mono); font-size: 11px; color: var(--primary); font-weight: 700; cursor: pointer; padding: 0;">
                                     View details &rarr;
-                                </span>
+                                </button>
+                                <a href="https://github.com/rishitm05/Electronic-Scoreboard" target="_blank" rel="noopener noreferrer" class="pill-chip pill-chip--blue" style="font-size: 10.5px; text-decoration: none;">
+                                    <i class="fa-brands fa-github"></i> GitHub ↗
+                                </a>
                             </div>
                         </div>
                         <div class="project-card-skills-bar">
@@ -427,8 +439,8 @@
                     </article>
 
                     <!-- Project 5: Lap Counter for Scalextric Racetrack -->
-                    <article class="project-card" onclick="openModalById('lap-counter')">
-                        <div class="project-card-img-wrap" id="img-wrap-lap-counter">
+                    <article class="project-card">
+                        <div class="project-card-img-wrap" id="img-wrap-lap-counter" onclick="openModalById('lap-counter')">
                             <div class="project-placeholder">
                                 <i class="fa-solid fa-stopwatch"></i>
                                 <span>EMBEDDED SYSTEMS &amp; ASSEMBLY</span>
@@ -438,8 +450,7 @@
                             <div>
                                 <div class="project-card-header">
                                     <span class="mono-accent" style="font-size: 10px;">Embedded Systems &amp; Assembly</span>
-                                    <h3 class="project-card-title">Lap Counter for Scalextric Racetrack</h3>
-                                    <span class="project-card-date">2024</span>
+                                    <h3 class="project-card-title" onclick="openModalById('lap-counter')">Lap Counter for Scalextric Racetrack</h3>
                                 </div>
                                 <p class="project-card-desc">Programmed a PIC16F84A microcontroller in Assembly (ASM) to deliver accurate motion-sensing lap counting, countdown sequencing, and completion indicators.</p>
                                 <ul class="project-card-bullets">
@@ -447,10 +458,13 @@
                                     <li>Implemented a countdown sequence with LEDs and monitored input signals to track lap progress.</li>
                                 </ul>
                             </div>
-                            <div style="margin-top: 10px;">
-                                <span class="mono-label" style="font-size: 11px; color: var(--primary); font-weight: 700;">
+                            <div class="flex justify-between items-center" style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line);">
+                                <button type="button" onclick="openModalById('lap-counter')" style="border: none; background: none; font-family: var(--font-mono); font-size: 11px; color: var(--primary); font-weight: 700; cursor: pointer; padding: 0;">
                                     View details &rarr;
-                                </span>
+                                </button>
+                                <a href="https://github.com/rishitm05/RC-Car-Lap-Counter" target="_blank" rel="noopener noreferrer" class="pill-chip pill-chip--blue" style="font-size: 10.5px; text-decoration: none;">
+                                    <i class="fa-brands fa-github"></i> GitHub ↗
+                                </a>
                             </div>
                         </div>
                         <div class="project-card-skills-bar">
@@ -458,6 +472,44 @@
                             <span class="pill-chip">PIC16F84A</span>
                             <span class="pill-chip">Microcontrollers</span>
                             <span class="pill-chip">Embedded Logic</span>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: Automated Plant Watering System -->
+                    <article class="project-card">
+                        <div class="project-card-img-wrap" id="img-wrap-plant-watering" onclick="openModalById('plant-watering')">
+                            <div class="project-placeholder">
+                                <i class="fa-solid fa-seedling"></i>
+                                <span>MECHATRONICS &amp; EMBEDDED SYSTEMS</span>
+                            </div>
+                        </div>
+                        <div class="project-card-body">
+                            <div>
+                                <div class="project-card-header">
+                                    <span class="mono-accent" style="font-size: 10px;">Mechatronics &amp; Embedded Systems</span>
+                                    <h3 class="project-card-title" onclick="openModalById('plant-watering')">Automated Plant Watering System</h3>
+                                    <span class="project-card-subtitle">Arkwright Engineering Scholarship 2022</span>
+                                </div>
+                                <p class="project-card-desc">Developed an autonomous plant irrigation system leveraging soil moisture and thermal telemetry with dynamic negative feedback op-amp control.</p>
+                                <ul class="project-card-bullets">
+                                    <li>Developed an automatic watering system using soil moisture and temperature sensors to maintain optimal plant conditions.</li>
+                                    <li>Designed op-amp comparator circuits to adjust water levels dynamically, using negative feedback.</li>
+                                </ul>
+                            </div>
+                            <div class="flex justify-between items-center" style="margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--line);">
+                                <button type="button" onclick="openModalById('plant-watering')" style="border: none; background: none; font-family: var(--font-mono); font-size: 11px; color: var(--primary); font-weight: 700; cursor: pointer; padding: 0;">
+                                    View details &rarr;
+                                </button>
+                                <a href="https://github.com/rishitm05/Automatic-Plant-Watering-System" target="_blank" rel="noopener noreferrer" class="pill-chip pill-chip--blue" style="font-size: 10.5px; text-decoration: none;">
+                                    <i class="fa-brands fa-github"></i> GitHub ↗
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-card-skills-bar">
+                            <span class="pill-chip">Fusion 360</span>
+                            <span class="pill-chip">PCB Design</span>
+                            <span class="pill-chip">Op-Amps</span>
+                            <span class="pill-chip">Sensors</span>
                         </div>
                     </article>
                 </div>
@@ -581,7 +633,6 @@
             <div class="mono-accent mb-2" id="modal-project-category"></div>
             <h3 class="section-title-h2 mb-1" id="modal-project-title" style="font-size: 22px;"></h3>
             <span class="project-card-subtitle mb-2" id="modal-project-subtitle" style="display: none;"></span>
-            <span class="mono-label mb-6" style="display: block; color: var(--faint);" id="modal-project-date"></span>
 
             <p class="body-p mb-6" id="modal-project-desc" style="color: var(--ink); font-weight: 500;"></p>
 
@@ -596,8 +647,8 @@
             </div>
 
             <div class="flex gap-4 pt-6 border-t flex-wrap">
-                <a href="https://github.com/rishitm05" target="_blank" rel="noopener noreferrer" class="btn-primary">
-                    <i class="fa-brands fa-github"></i> GitHub Profile ↗
+                <a href="https://github.com/rishitm05" id="modal-project-github-link" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    <i class="fa-brands fa-github"></i> Open GitHub Repository ↗
                 </a>
                 <a href="Rishit_Madireddy_CV.pdf" target="_blank" class="pill-btn">
                     <i class="fa-solid fa-file-pdf"></i> View Official CV ↗

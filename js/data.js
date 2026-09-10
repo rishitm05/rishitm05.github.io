@@ -83,13 +83,12 @@ const DATA = {
     }
   ],
 
-  /* ── Projects (Ordered Exactly to User Spec) ─────────────── */
+  /* ── Projects (No Dates, Direct GitHub Links) ─────────────── */
   projects: [
     {
       id: "quadcopter",
       title: "PID-Tuned Quadcopter",
       subtitle: null,
-      date: "June 2025 – Present",
       category: "Robotics & Controls",
       shortDesc: "High-performance custom 5-inch aerobatic quadcopter with CNC-machined CFRP airframe, dynamic Simulink modelling, and toroidal propeller CFD.",
       bullets: [
@@ -99,13 +98,13 @@ const DATA = {
       ],
       skills: ["Simulink", "Betaflight", "Ansys Fluent", "Fusion 360", "CNC CFRP", "PID Tuning"],
       iconClass: "fa-solid fa-drone",
-      image: "images/projects/quadcopter.png"
+      image: "images/projects/quadcopter.png",
+      githubUrl: "https://github.com/rishitm05/PID-Tuned-Quadcopter"
     },
     {
       id: "imeche-ev",
       title: "Automated EV Charging Device",
       subtitle: "IMechE Design Challenge",
-      date: "January 2025 – March 2025",
       category: "Mechanical & CAD",
       shortDesc: "Autonomous wall-detecting docking vehicle engineered with FEA-tested chassis and Python spring compression mechanics for the IMechE Design Challenge.",
       bullets: [
@@ -116,13 +115,13 @@ const DATA = {
       ],
       skills: ["Fusion 360", "FEA", "Python 3", "Analogue Circuitry", "Mechanism Design", "Prototyping"],
       iconClass: "fa-solid fa-charging-station",
-      image: "images/projects/imeche-ev.png"
+      image: "images/projects/imeche-ev.png",
+      githubUrl: "https://github.com/rishitm05/IMechE-Design-Challenge-Automated-EV-Charging-Device"
     },
     {
       id: "wind-turbine",
       title: "Portable High-Efficiency Wind Turbine",
       subtitle: "UCL Autodesk Mechathon",
-      date: "January 2025",
       category: "Aerodynamics & CFD",
       shortDesc: "UCL Autodesk Mechathon (4th Place overall) — custom aerodynamic blade profiling, RPM and power output CFD simulations, and automated G-code manufacturing.",
       bullets: [
@@ -132,46 +131,64 @@ const DATA = {
       ],
       skills: ["Fusion 360", "Ansys Fluent", "3D Printing", "G-Code", "Laser Cutting", "Aerodynamics"],
       iconClass: "fa-solid fa-wind",
-      image: "images/projects/wind-turbine.png"
+      image: "images/projects/wind-turbine.png",
+      githubUrl: "https://github.com/rishitm05/UCL-Autodesk-Mechathon-Portable-Wind-Turbine"
     },
     {
       id: "cricket-scoreboard",
       title: "Electronic Cricket Scoreboard",
       subtitle: null,
-      date: "2024",
       category: "Electronics & PCB Design",
-      shortDesc: "Designed and built an electronic cricket scoreboard to track runs and wickets for cricket matches with custom cascading counter circuitry and PCB layout.",
+      shortDesc: "Designed and built an electronic cricket scoreboard to track runs and wickets for cricket matches with cascading 4026 decade counters and custom PCB layout.",
       bullets: [
         "Designed and built an electronic cricket scoreboard to track runs and wickets for cricket matches.",
-        "Used astable and monostable circuits to increment values on 7-segment displays with cascading 4026 decade counters.",
-        "Tested circuit on breadboards and effectively documented the entire design and validation process.",
-        "Converted CircuitWizard schematic to Fusion 360 and designed a functioning PCB for reliable scoring."
+        "Used astable and monostable circuits to increment values on 7-segment displays with cascading 4026s.",
+        "Tested circuit on breadboards and effectively documented the entire design process.",
+        "Converted CircuitWizard Schematic to Fusion 360 and designed a functioning PCB for easy scoring."
       ],
       skills: ["Fusion 360", "PCB Design", "CircuitWizard", "4026 ICs", "Analogue Circuitry", "Prototyping"],
       iconClass: "fa-solid fa-microchip",
-      image: "images/projects/cricket-scoreboard.png"
+      image: "images/projects/cricket-scoreboard.png",
+      githubUrl: "https://github.com/rishitm05/Electronic-Scoreboard"
     },
     {
       id: "lap-counter",
       title: "Lap Counter for Scalextric Racetrack",
       subtitle: null,
-      date: "2024",
       category: "Embedded Systems & Assembly",
       shortDesc: "Programmed a PIC16F84A microcontroller in Assembly (ASM) to deliver accurate motion-sensing lap counting, countdown sequencing, and completion indicators.",
       bullets: [
         "Programmed a PIC16F84A microcontroller in Assembly (ASM) to count laps for an RC car Scalextric track.",
-        "Implemented a countdown sequence with LEDs and monitored input signals to track lap progress in real-time.",
-        "Designed the system to increment lap count and update memory upon detecting motion from optical/switch sensors.",
-        "Configured lap display on a 7-segment display and incorporated a flashing LED sequence to indicate race completion.",
-        "Created a reliable race timing system with internal logic to handle signal delays and prevent false triggers."
+        "Implemented a countdown sequence with LEDs and monitored input signals to track lap progress.",
+        "Designed the system to increment the lap count and update memory upon detecting motion in sensors.",
+        "Configured the display of lap counts on a 7-segment display and incorporated a flashing LED to indicate race completion.",
+        "Created a reliable race system with internal logic to handle signal delays and accurate lap counting."
       ],
       skills: ["Assembly (ASM)", "PIC16F84A", "Microcontrollers", "Embedded Systems", "Sensor Integration", "Logic Design"],
       iconClass: "fa-solid fa-stopwatch",
-      image: "images/projects/lap-counter.png"
+      image: "images/projects/lap-counter.png",
+      githubUrl: "https://github.com/rishitm05/RC-Car-Lap-Counter"
+    },
+    {
+      id: "plant-watering",
+      title: "Automated Plant Watering System",
+      subtitle: "Arkwright Engineering Scholarship 2022",
+      category: "Mechatronics & Embedded Systems",
+      shortDesc: "Developed an autonomous plant irrigation system leveraging soil moisture and thermal telemetry with dynamic negative feedback op-amp control.",
+      bullets: [
+        "Developed an automatic watering system using soil moisture and temperature sensors to maintain optimal conditions for the plant.",
+        "Designed op-amp comparator circuits to adjust water levels dynamically, using negative feedback.",
+        "Prototyped the system on breadboards and CAD tools (Fusion 360, SketchUp, CircuitWizard, Altium CircuitMaker 2) to design a housing and PCB.",
+        "Ensured system reliability by extensively testing each subsystem against calibrated values."
+      ],
+      skills: ["Fusion 360", "PCB Design", "Op-Amp Comparators", "Sensors", "Altium CircuitMaker", "CircuitWizard", "Prototyping"],
+      iconClass: "fa-solid fa-seedling",
+      image: "images/projects/plant-watering.png",
+      githubUrl: "https://github.com/rishitm05/Automatic-Plant-Watering-System"
     }
   ],
 
-  /* ── Technical Skills (Grouped exactly as in CV) ─────────── */
+  /* ── Technical Skills (Exact CV format) ──────────────────── */
   skillsCategories: [
     {
       category: "Engineering & Analysis",
